@@ -64,7 +64,7 @@
             {
                   //  _kXBuffer = cell.frame.size.width - _bubbleWidth - avatarWidth;
                     textXBuffer = 10.0f;
-                     CellIdentifier = @"Host";
+                     CellIdentifier = @"Responder";
             
             
                     EXPSentMessageView *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -80,7 +80,7 @@
         else
             {
                     textXBuffer = 19.0f;
-                    CellIdentifier = @"Responder";
+                    CellIdentifier = @"Host";
                     EXPReceivedMessageView *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
                     if (!cell) {
                             cell = [[EXPReceivedMessageView alloc] init];

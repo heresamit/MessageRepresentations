@@ -10,6 +10,7 @@
 #import "EXPFullyDrawnTableViewController.h"
 #import "EXPFullyDrawnHeightsCachedViewController.h"
 #import "EXPAppDataSource.h"
+#import "EXPSpecialViewController.h"
 @interface EXPViewController ()
 @property (nonatomic,strong) EXPAppDataSource* messages;
 @end
@@ -39,6 +40,12 @@
         tvc.messages = _messages;
     }
     
+    if([[segue identifier] isEqualToString:@"newSegue"]){
+        EXPSpecialViewController *tvc = (EXPSpecialViewController *)[segue destinationViewController];
+        tvc.messages = _messages;
+
+//        do something
+    }
 }
 
 @end
