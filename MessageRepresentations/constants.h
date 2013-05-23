@@ -13,7 +13,7 @@
 #define xRIGHTBUFFERFORBUBBLE 2.0f
 #define xLEFTBUFFERFORTEXT 5.0f
 #define xRIGHTBUFFERFORTEXT 10.0f
-#define netYBUFFERFORCELL 26.0f
+#define netYBUFFERFORCELL 20.0f
 
 #define yBOTTOMSHADOWMARGIN 4.0f
 #define xLEFTSHADOWMARGIN 4.0f
@@ -22,7 +22,7 @@
 #define triangleWidth  9.5f
 #define triangleTopBuffer 4.0f
 
-#define yTOPBUBBLEBUFFER 2.0f
+#define yTOPBUBBLEBUFFER 5.0f
 #define yBOTTOMBUBBLEBUFFER 2.0f
 
 #define CELLWIDTH [[UIScreen mainScreen] bounds].size.width

@@ -12,16 +12,17 @@
 @implementation EXPReceivedMessageView
 @synthesize text = _text;
 @synthesize size = _size;
+
 - (void)drawRect:(CGRect)rect {
     
         CGContextRef context = UIGraphicsGetCurrentContext();
-     CGFloat colorsArray[12]={255.0f/255.0f,255.0f/255.0f,255.0f/255.0f,1.0f,215.0f/255.0f,215.0f/255.0f,215.0f/255.0f,1.0f,230.0f/255.0f,230.0f/255.0f,230.0f/255.0f,1.0f};
+        CGFloat colorsArray[12]={255.0f/255.0f,255.0f/255.0f,255.0f/255.0f,1.0f,220.0f/255.0f,220.0f/255.0f,220.0f/255.0f,1.0f,230.0f/255.0f,230.0f/255.0f,230.0f/255.0f,1.0f};
 
-            CGContextSetRGBStrokeColor(context, 200.0f/255.0f, 200.0f/255.0f, 200.0f/255.0f, 1.0f);//
-            CGContextSaveGState(context);
-    CGSize tempSize = [_size CGSizeValue];
+        CGContextSetRGBStrokeColor(context, 200.0f/255.0f, 200.0f/255.0f, 200.0f/255.0f, 1.0f);//
+        CGContextSaveGState(context);
+        CGSize tempSize = [_size CGSizeValue];
         CGPoint textStartPoint = CGPointMake(rect.origin.x + xLEFTSHADOWMARGIN + xLEFTBUFFERFORBUBBLE  + xLEFTBUFFERFORTEXT + triangleHeight, rect.origin.y + netYBUFFERFORCELL/2);
-       CGMutablePathRef path = createPathForResponderSpeechBubble(rect, 8.0f,tempSize.width);
+        CGMutablePathRef path = createPathForResponderSpeechBubble(rect, 8.0f,tempSize.width);
     
 //        CGContextAddPath(context, path);
 //        UIColor * shadowColor = [UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:1];
@@ -44,11 +45,11 @@
         CGPoint endPoint = CGPointMake(CGRectGetMidX(rect), CGRectGetMaxY(rect));
         CGContextDrawLinearGradient(context, gradient, startPoint, endPoint, 0);
     
-        CGContextRestoreGState(context);
-        CGContextSetLineWidth(context, 1.0f);
-        CGContextAddPath(context, path);
-        CGContextDrawPath(context, kCGPathStroke);
-
+//        CGContextRestoreGState(context);
+//        CGContextSetLineWidth(context, 1.0f);
+//        CGContextAddPath(context, path);
+//        CGContextDrawPath(context, kCGPathStroke);
+//
         [_text drawInRect:CGRectMake(textStartPoint.x,textStartPoint.y,tempSize.width,tempSize.height) withFont:[UIFont fontWithName:@"Helvetica Neue" size:15] lineBreakMode:NSLineBreakByWordWrapping alignment:NSTextAlignmentLeft];
     
         CGPathRelease(path);

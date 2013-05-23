@@ -45,7 +45,9 @@
             cell = [[EXPSimpleSendView alloc] init];
             // or your custom initialization
         }
+        cell.size = [messages.heightArray objectAtIndex:indexPath.row];
         cell.text = [[messages.messageArray objectAtIndex:indexPath.row] objectAtIndex:1];
+      //  cell.layer.shouldRasterize = YES;
         return cell;
         
     }
@@ -59,7 +61,7 @@
             cell = [[EXPSimpleReceiveView alloc] init];
             // or your custom initialization
         }
-        
+        cell.size = [messages.heightArray objectAtIndex:indexPath.row];
         cell.text = [[messages.messageArray objectAtIndex:indexPath.row] objectAtIndex:1];
         return cell;
         

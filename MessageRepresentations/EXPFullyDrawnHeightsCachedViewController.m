@@ -11,7 +11,7 @@
 #import "EXPSentMessageView.h"
 #import "EXPReceivedMessageView.h"
 #import "constants.h"
-
+#import  <QuartzCore/QuartzCore.h>
 
 @interface EXPFullyDrawnHeightsCachedViewController ()
 
@@ -67,6 +67,7 @@
             cell = [[EXPSentMessageView alloc] init];
             // or your custom initialization
         }
+        cell.layer.shouldRasterize = YES;
         cell.size = [messages.heightArray objectAtIndex:indexPath.row];
         cell.text = [[messages.messageArray objectAtIndex:indexPath.row] objectAtIndex:1];
         return cell;
@@ -82,8 +83,8 @@
             cell = [[EXPReceivedMessageView alloc] init];
             // or your custom initialization
         }
-        
-        cell.size = [messages.heightArray objectAtIndex:indexPath.row];
+        cell.layer.shouldRasterize = YES;
+        cell.size = [messages.heightArray objectAtIndex:indexPath.row] ;
         cell.text = [[messages.messageArray objectAtIndex:indexPath.row] objectAtIndex:1];
         return cell;
         
