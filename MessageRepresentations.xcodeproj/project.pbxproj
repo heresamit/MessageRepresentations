@@ -18,6 +18,12 @@
 		DFF78D5C174D38D3000A8962 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DFF78D5B174D38D3000A8962 /* Default-568h@2x.png */; };
 		DFF78D5F174D38D3000A8962 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFF78D5D174D38D3000A8962 /* MainStoryboard.storyboard */; };
 		DFF78D62174D38D3000A8962 /* EXPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF78D61174D38D3000A8962 /* EXPViewController.m */; };
+		DFF78D6A174D38F8000A8962 /* EXPAppDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF78D69174D38F8000A8962 /* EXPAppDataSource.m */; };
+		DFF78D6D174D39AD000A8962 /* EXPSentMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF78D6C174D39AD000A8962 /* EXPSentMessageView.m */; };
+		DFF78D71174D3B25000A8962 /* EXPReceivedMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF78D70174D3B25000A8962 /* EXPReceivedMessageView.m */; };
+		DFF78D74174D3CD5000A8962 /* EXPFullyDrawnTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF78D73174D3CD5000A8962 /* EXPFullyDrawnTableViewController.m */; };
+		DFF78D7A174D3E1E000A8962 /* MessageFile.plist in Resources */ = {isa = PBXBuildFile; fileRef = DFF78D79174D3E1E000A8962 /* MessageFile.plist */; };
+		DFF78D7D174D4729000A8962 /* EXPFullyDrawnHeightsCachedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF78D7C174D4729000A8962 /* EXPFullyDrawnHeightsCachedViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +43,18 @@
 		DFF78D5E174D38D3000A8962 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		DFF78D60174D38D3000A8962 /* EXPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EXPViewController.h; sourceTree = "<group>"; };
 		DFF78D61174D38D3000A8962 /* EXPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EXPViewController.m; sourceTree = "<group>"; };
+		DFF78D68174D38F8000A8962 /* EXPAppDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPAppDataSource.h; sourceTree = "<group>"; };
+		DFF78D69174D38F8000A8962 /* EXPAppDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPAppDataSource.m; sourceTree = "<group>"; };
+		DFF78D6B174D39AD000A8962 /* EXPSentMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPSentMessageView.h; sourceTree = "<group>"; };
+		DFF78D6C174D39AD000A8962 /* EXPSentMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPSentMessageView.m; sourceTree = "<group>"; };
+		DFF78D6E174D3ACF000A8962 /* constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
+		DFF78D6F174D3B25000A8962 /* EXPReceivedMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPReceivedMessageView.h; sourceTree = "<group>"; };
+		DFF78D70174D3B25000A8962 /* EXPReceivedMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPReceivedMessageView.m; sourceTree = "<group>"; };
+		DFF78D72174D3CD5000A8962 /* EXPFullyDrawnTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPFullyDrawnTableViewController.h; sourceTree = "<group>"; };
+		DFF78D73174D3CD5000A8962 /* EXPFullyDrawnTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPFullyDrawnTableViewController.m; sourceTree = "<group>"; };
+		DFF78D79174D3E1E000A8962 /* MessageFile.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MessageFile.plist; sourceTree = "<group>"; };
+		DFF78D7B174D4729000A8962 /* EXPFullyDrawnHeightsCachedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPFullyDrawnHeightsCachedViewController.h; sourceTree = "<group>"; };
+		DFF78D7C174D4729000A8962 /* EXPFullyDrawnHeightsCachedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPFullyDrawnHeightsCachedViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +104,10 @@
 				DFF78D54174D38D3000A8962 /* EXPAppDelegate.h */,
 				DFF78D55174D38D3000A8962 /* EXPAppDelegate.m */,
 				DFF78D5D174D38D3000A8962 /* MainStoryboard.storyboard */,
-				DFF78D60174D38D3000A8962 /* EXPViewController.h */,
-				DFF78D61174D38D3000A8962 /* EXPViewController.m */,
+				DFF78D75174D3DD9000A8962 /* Controllers */,
+				DFF78D76174D3DE5000A8962 /* Model */,
+				DFF78D77174D3DF3000A8962 /* Views */,
+				DFF78D78174D3DFF000A8962 /* Helpers */,
 				DFF78D4C174D38D3000A8962 /* Supporting Files */,
 			);
 			path = MessageRepresentations;
@@ -105,6 +125,48 @@
 				DFF78D5B174D38D3000A8962 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DFF78D75174D3DD9000A8962 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DFF78D60174D38D3000A8962 /* EXPViewController.h */,
+				DFF78D7B174D4729000A8962 /* EXPFullyDrawnHeightsCachedViewController.h */,
+				DFF78D7C174D4729000A8962 /* EXPFullyDrawnHeightsCachedViewController.m */,
+				DFF78D61174D38D3000A8962 /* EXPViewController.m */,
+				DFF78D72174D3CD5000A8962 /* EXPFullyDrawnTableViewController.h */,
+				DFF78D73174D3CD5000A8962 /* EXPFullyDrawnTableViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		DFF78D76174D3DE5000A8962 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DFF78D68174D38F8000A8962 /* EXPAppDataSource.h */,
+				DFF78D69174D38F8000A8962 /* EXPAppDataSource.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		DFF78D77174D3DF3000A8962 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DFF78D6B174D39AD000A8962 /* EXPSentMessageView.h */,
+				DFF78D6C174D39AD000A8962 /* EXPSentMessageView.m */,
+				DFF78D6F174D3B25000A8962 /* EXPReceivedMessageView.h */,
+				DFF78D70174D3B25000A8962 /* EXPReceivedMessageView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		DFF78D78174D3DFF000A8962 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DFF78D6E174D3ACF000A8962 /* constants.h */,
+				DFF78D79174D3E1E000A8962 /* MessageFile.plist */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +226,7 @@
 				DFF78D5A174D38D3000A8962 /* Default@2x.png in Resources */,
 				DFF78D5C174D38D3000A8962 /* Default-568h@2x.png in Resources */,
 				DFF78D5F174D38D3000A8962 /* MainStoryboard.storyboard in Resources */,
+				DFF78D7A174D3E1E000A8962 /* MessageFile.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +240,11 @@
 				DFF78D52174D38D3000A8962 /* main.m in Sources */,
 				DFF78D56174D38D3000A8962 /* EXPAppDelegate.m in Sources */,
 				DFF78D62174D38D3000A8962 /* EXPViewController.m in Sources */,
+				DFF78D6A174D38F8000A8962 /* EXPAppDataSource.m in Sources */,
+				DFF78D6D174D39AD000A8962 /* EXPSentMessageView.m in Sources */,
+				DFF78D71174D3B25000A8962 /* EXPReceivedMessageView.m in Sources */,
+				DFF78D74174D3CD5000A8962 /* EXPFullyDrawnTableViewController.m in Sources */,
+				DFF78D7D174D4729000A8962 /* EXPFullyDrawnHeightsCachedViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +326,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MessageRepresentations/MessageRepresentations-Prefix.pch";
 				INFOPLIST_FILE = "MessageRepresentations/MessageRepresentations-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -269,6 +338,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MessageRepresentations/MessageRepresentations-Prefix.pch";
 				INFOPLIST_FILE = "MessageRepresentations/MessageRepresentations-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

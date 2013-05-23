@@ -7,16 +7,19 @@
 //
 
 #import "EXPViewController.h"
-
+#import "EXPFullyDrawnTableViewController.h"
+#import "EXPFullyDrawnHeightsCachedViewController.h"
+#import "EXPAppDataSource.h"
 @interface EXPViewController ()
-
+@property (nonatomic,strong) EXPAppDataSource* messages;
 @end
 
 @implementation EXPViewController
-
+@synthesize messages = _messages;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    _messages = [[EXPAppDataSource alloc] init];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -24,6 +27,18 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([[segue identifier] isEqualToString:@"fullyDrawnTableViewSegue"]){
+        EXPFullyDrawnTableViewController *tvc = (EXPFullyDrawnTableViewController *)[segue destinationViewController];
+        tvc.messages = _messages;
+    }
+    if([[segue identifier] isEqualToString:@"fullyDrawnHeightsCachedSegue"]){
+        EXPFullyDrawnHeightsCachedViewController *tvc = (EXPFullyDrawnHeightsCachedViewController *)[segue destinationViewController];
+        tvc.messages = _messages;
+    }
+    
 }
 
 @end
