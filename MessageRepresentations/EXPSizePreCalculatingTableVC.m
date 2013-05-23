@@ -1,45 +1,23 @@
 //
-//  EXPFullyDrawnHeightsCachedViewController.m
+//  EXPSizePreCalculatingTableVC.m
 //  MessageRepresentations
 //
 //  Created by Amit Chowdhary on 23/05/13.
 //  Copyright (c) 2013 Amit Chowdhary. All rights reserved.
 //
 
-#import "EXPFullyDrawnHeightsCachedViewController.h"
-#import "EXPAppDataSource.h"
-#import "EXPSentMessageView.h"
-#import "EXPReceivedMessageView.h"
+#import "EXPSizePreCalculatingTableVC.h"
+#import "EXPSimpleReceiveView.h"
+#import "EXPSimpleSendView.h"
 #import "constants.h"
 
-
-@interface EXPFullyDrawnHeightsCachedViewController ()
-
+@interface EXPSizePreCalculatingTableVC ()
+@property (nonatomic,strong) NSMutableArray *sizeArray;
 @end
 
-@implementation EXPFullyDrawnHeightsCachedViewController
+@implementation EXPSizePreCalculatingTableVC
+
 @synthesize messages;
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -62,12 +40,11 @@
         CellIdentifier = @"Host";
         
         
-        EXPSentMessageView *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        EXPSimpleSendView *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
         if (!cell) {
-            cell = [[EXPSentMessageView alloc] init];
+            cell = [[EXPSimpleSendView alloc] init];
             // or your custom initialization
         }
-        cell.size = [messages.heightArray objectAtIndex:indexPath.row];
         cell.text = [[messages.messageArray objectAtIndex:indexPath.row] objectAtIndex:1];
         return cell;
         
@@ -77,13 +54,12 @@
     {
         textXBuffer = 19.0f;
         CellIdentifier = @"Responder";
-        EXPReceivedMessageView *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        EXPSimpleReceiveView *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
         if (!cell) {
-            cell = [[EXPReceivedMessageView alloc] init];
+            cell = [[EXPSimpleReceiveView alloc] init];
             // or your custom initialization
         }
         
-        cell.size = [messages.heightArray objectAtIndex:indexPath.row];
         cell.text = [[messages.messageArray objectAtIndex:indexPath.row] objectAtIndex:1];
         return cell;
         

@@ -10,4 +10,5 @@
 
 @interface EXPSentMessageView : UITableViewCell
 @property (nonatomic,weak) NSString* text;
+@property (nonatomic,weak) NSValue* size;
 @end

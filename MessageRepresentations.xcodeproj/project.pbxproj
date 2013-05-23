@@ -21,7 +21,6 @@
 		DFF78D6A174D38F8000A8962 /* EXPAppDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF78D69174D38F8000A8962 /* EXPAppDataSource.m */; };
 		DFF78D6D174D39AD000A8962 /* EXPSentMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF78D6C174D39AD000A8962 /* EXPSentMessageView.m */; };
 		DFF78D71174D3B25000A8962 /* EXPReceivedMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF78D70174D3B25000A8962 /* EXPReceivedMessageView.m */; };
-		DFF78D74174D3CD5000A8962 /* EXPFullyDrawnTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF78D73174D3CD5000A8962 /* EXPFullyDrawnTableViewController.m */; };
 		DFF78D7A174D3E1E000A8962 /* MessageFile.plist in Resources */ = {isa = PBXBuildFile; fileRef = DFF78D79174D3E1E000A8962 /* MessageFile.plist */; };
 		DFF78D7D174D4729000A8962 /* EXPFullyDrawnHeightsCachedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF78D7C174D4729000A8962 /* EXPFullyDrawnHeightsCachedViewController.m */; };
 		DFF78D8B174DE7C8000A8962 /* EXPBubbleData.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF78D8A174DE7C8000A8962 /* EXPBubbleData.m */; };
@@ -60,8 +59,6 @@
 		DFF78D6E174D3ACF000A8962 /* constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
 		DFF78D6F174D3B25000A8962 /* EXPReceivedMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPReceivedMessageView.h; sourceTree = "<group>"; };
 		DFF78D70174D3B25000A8962 /* EXPReceivedMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPReceivedMessageView.m; sourceTree = "<group>"; };
-		DFF78D72174D3CD5000A8962 /* EXPFullyDrawnTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPFullyDrawnTableViewController.h; sourceTree = "<group>"; };
-		DFF78D73174D3CD5000A8962 /* EXPFullyDrawnTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPFullyDrawnTableViewController.m; sourceTree = "<group>"; };
 		DFF78D79174D3E1E000A8962 /* MessageFile.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MessageFile.plist; sourceTree = "<group>"; };
 		DFF78D7B174D4729000A8962 /* EXPFullyDrawnHeightsCachedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPFullyDrawnHeightsCachedViewController.h; sourceTree = "<group>"; };
 		DFF78D7C174D4729000A8962 /* EXPFullyDrawnHeightsCachedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPFullyDrawnHeightsCachedViewController.m; sourceTree = "<group>"; };
@@ -164,8 +161,6 @@
 				DFF78D7B174D4729000A8962 /* EXPFullyDrawnHeightsCachedViewController.h */,
 				DFF78D7C174D4729000A8962 /* EXPFullyDrawnHeightsCachedViewController.m */,
 				DFF78D61174D38D3000A8962 /* EXPViewController.m */,
-				DFF78D72174D3CD5000A8962 /* EXPFullyDrawnTableViewController.h */,
-				DFF78D73174D3CD5000A8962 /* EXPFullyDrawnTableViewController.m */,
 				DFF78D9A174DF63A000A8962 /* EXPSpecialViewController.h */,
 				DFF78D9B174DF63A000A8962 /* EXPSpecialViewController.m */,
 				DFF78D9D174E1498000A8962 /* EXPSimpleDrawnViewController.h */,
@@ -291,7 +286,6 @@
 				DFF78D6A174D38F8000A8962 /* EXPAppDataSource.m in Sources */,
 				DFF78D6D174D39AD000A8962 /* EXPSentMessageView.m in Sources */,
 				DFF78D71174D3B25000A8962 /* EXPReceivedMessageView.m in Sources */,
-				DFF78D74174D3CD5000A8962 /* EXPFullyDrawnTableViewController.m in Sources */,
 				DFF78D7D174D4729000A8962 /* EXPFullyDrawnHeightsCachedViewController.m in Sources */,
 				DFF78D8B174DE7C8000A8962 /* EXPBubbleData.m in Sources */,
 				DFF78D8F174DECBB000A8962 /* EXPSpecialTableView.m in Sources */,
