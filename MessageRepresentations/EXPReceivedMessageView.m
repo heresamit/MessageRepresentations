@@ -8,53 +8,9 @@
 
 #import "EXPReceivedMessageView.h"
 #import "constants.h"
-
+#import "pathMethods.h"
 @implementation EXPReceivedMessageView
 @synthesize text = _text;
-CGMutablePathRef createPathForResponderSpeechBubble(CGRect rect, CGFloat cornerRadius, CGFloat textWidth) {
-        // create a mutable path
-        CGMutablePathRef path = CGPathCreateMutable();
-       CGPoint topLeft = CGPointMake(rect.origin.x + xLEFTBUFFERFORBUBBLE + triangleHeight + xLEFTSHADOWMARGIN, rect.origin.y + yTOPBUBBLEBUFFER);
-       CGPoint topRight = CGPointMake(topLeft.x + xRIGHTBUFFERFORTEXT + textWidth, rect.origin.y + yTOPBUBBLEBUFFER);
-       CGPoint bottomLeft = CGPointMake(topLeft.x, rect.origin.y + rect.size.height - yBOTTOMBUBBLEBUFFER - yBOTTOMSHADOWMARGIN);
-       CGPoint bottomRight = CGPointMake(topRight.x, bottomLeft.y);
-    
-        // move to top left
-        CGPathMoveToPoint(path, NULL, topLeft.x + cornerRadius, topLeft.y);
-    
-        // add top line
-        CGPathAddLineToPoint(path, NULL, topRight.x - cornerRadius, topRight.y);
-    
-        // add top right curve
-        CGPathAddQuadCurveToPoint(path, NULL, topRight.x, topRight.y, topRight.x, topRight.y + cornerRadius);
-    
-        // add right line
-        CGPathAddLineToPoint(path,NULL, bottomRight.x, bottomRight.y - cornerRadius);
-    
-        // add bottom right curve
-        CGPathAddQuadCurveToPoint(path, NULL, bottomRight.x, bottomRight.y, bottomRight.x - cornerRadius, bottomRight.y);
-    
-        // add bottom line
-        CGPathAddLineToPoint(path, NULL, bottomLeft.x + cornerRadius, bottomLeft.y);
-    
-        // add bottom left curve
-        CGPathAddQuadCurveToPoint(path, NULL, bottomLeft.x, bottomLeft.y, bottomLeft.x, bottomLeft.y - cornerRadius);
-    
-        //add little triangle
-        CGPathAddLineToPoint(path,NULL, topLeft.x , bottomLeft.y - rect.size.height/2 +  triangleWidth/2 + triangleTopBuffer);
-        CGPathAddLineToPoint(path,NULL, topLeft.x - triangleHeight, bottomLeft.y - rect.size.height/2 + triangleTopBuffer);
-        CGPathAddLineToPoint(path,NULL, topLeft.x, bottomLeft.y - rect.size.height/2 - triangleWidth/2 + triangleTopBuffer);
-    
-        // add left line
-        CGPathAddLineToPoint(path, NULL, topLeft.x, topLeft.y + cornerRadius);
-    
-        // add top left curve
-        CGPathAddQuadCurveToPoint(path, NULL, topLeft.x, topLeft.y, topLeft.x + cornerRadius, topLeft.y);
-    
-        // return the path
-        return path;
-    
-    }
 - (void)drawRect:(CGRect)rect {
     
         CGContextRef context = UIGraphicsGetCurrentContext();
@@ -67,11 +23,11 @@ CGMutablePathRef createPathForResponderSpeechBubble(CGRect rect, CGFloat cornerR
         CGPoint textStartPoint = CGPointMake(rect.origin.x + xLEFTSHADOWMARGIN + xLEFTBUFFERFORBUBBLE  + xLEFTBUFFERFORTEXT + triangleHeight, rect.origin.y + netYBUFFERFORCELL/2);
        CGMutablePathRef path = createPathForResponderSpeechBubble(rect, 8.0f,tempSize.width);
     
-        CGContextAddPath(context, path);
-        UIColor * shadowColor = [UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:1];
-        CGContextSetShadowWithColor(context, CGSizeMake(-2.5, 2.5), 3.0, shadowColor.CGColor);
-        CGContextDrawPath(context, kCGPathFill);
-    
+//        CGContextAddPath(context, path);
+//        UIColor * shadowColor = [UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:1];
+//        CGContextSetShadowWithColor(context, CGSizeMake(-2.5, 2.5), 3.0, shadowColor.CGColor);
+//        CGContextDrawPath(context, kCGPathFill);
+//    
         CGContextAddPath(context, path);
     
         CGContextClip(context);

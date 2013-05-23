@@ -11,6 +11,7 @@
 #import "EXPFullyDrawnHeightsCachedViewController.h"
 #import "EXPAppDataSource.h"
 #import "EXPSpecialViewController.h"
+#import "EXPSimpleDrawnViewController.h"
 @interface EXPViewController ()
 @property (nonatomic,strong) EXPAppDataSource* messages;
 @end
@@ -46,6 +47,16 @@
 
 //        do something
     }
+    
+    if([[segue identifier] isEqualToString:@"SimpleDrawRectSegue"]){
+        EXPSimpleDrawnViewController *tvc = (EXPSimpleDrawnViewController *)[segue destinationViewController];
+        tvc.messages = _messages;
+        
+        //        do something
+    }
+
+    
+    
 }
 
 @end
