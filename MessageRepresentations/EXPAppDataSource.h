@@ -11,4 +11,5 @@
 @interface EXPAppDataSource : NSObject
 @property (nonatomic,strong) NSMutableArray *messageArray;
 @property (nonatomic,strong) NSMutableArray *heightArray;
+@property (nonatomic,strong) NSMutableArray *pathArray;
 @end

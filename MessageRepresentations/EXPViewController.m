@@ -12,6 +12,7 @@
 #import "EXPAppDataSource.h"
 #import "EXPSpecialViewController.h"
 #import "EXPSimpleDrawnViewController.h"
+
 @interface EXPViewController ()
 @property (nonatomic,strong) EXPAppDataSource* messages;
 @end
@@ -32,10 +33,12 @@
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if([[segue identifier] isEqualToString:@"fullyDrawnTableViewSegue"]){
-        EXPFullyDrawnTableViewController *tvc = (EXPFullyDrawnTableViewController *)[segue destinationViewController];
-        tvc.messages = _messages;
-    }
+//    if([[segue identifier] isEqualToString:@"fullyDrawnTableViewSegue"]){
+//        EXPFullyDrawnTableViewController *tvc = (EXPFullyDrawnTableViewController *)[segue destinationViewController];
+//        tvc.messages = _messages;
+//       
+//
+//    }
     if([[segue identifier] isEqualToString:@"fullyDrawnHeightsCachedSegue"]){
         EXPFullyDrawnHeightsCachedViewController *tvc = (EXPFullyDrawnHeightsCachedViewController *)[segue destinationViewController];
         tvc.messages = _messages;
@@ -54,8 +57,8 @@
         
         //        do something
     }
-
     
+
     
 }
 

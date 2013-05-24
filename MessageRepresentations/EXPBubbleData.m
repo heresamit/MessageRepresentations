@@ -16,7 +16,6 @@
 @synthesize type = _type;
 @synthesize view = _view;
 @synthesize insets = _insets;
-@synthesize avatar = _avatar;
 
 #pragma mark - Text bubble
 

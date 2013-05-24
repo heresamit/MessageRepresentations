@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface EXPSentMessageView : UITableViewCell
-@property (nonatomic,weak) NSString* text;
-@property (nonatomic,weak) NSValue* size;
+@property (nonatomic,strong) NSString* text;
+@property (nonatomic,strong) NSValue* size;
 @end

@@ -10,26 +10,25 @@
 #import "pathMethods.h"
 
 @implementation EXPSentMessageView
-@synthesize text = _text;
-@synthesize size =_size;
+
 - (void)drawRect:(CGRect)rect {
     
         CGContextRef context = UIGraphicsGetCurrentContext();
         CGFloat colorsArray[12] = {215.0f/255.0f,235.0f/255.0f,240.0f/255.0f,1.0f,170.0f/255.0f,220.0f/255.0f,240.0f/255.0f,1.0f,200.0f/255.0f,230.0f/255.0f,240.0f/255.0f,1.0f};
     
-        CGSize tempSize = [_size CGSizeValue];
+        CGSize tempSize = [self.size CGSizeValue];
         CGContextSetRGBStrokeColor(context, 142.0f/255.0f, 207.0f/255.0f, 235.0f/255.0f, 1.0f);
         CGContextSaveGState(context);
-        CGMutablePathRef path = createPathForHostSpeechBubble(rect, 8.0f, tempSize.width);
-    
+        CGMutablePathRef path = createPathForHostSpeechBubble(rect, 8.0f,tempSize.width);
     
 //        CGContextAddPath(context, path);
 //        UIColor * shadowColor = [UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:1];
 //        CGContextSetShadowWithColor(context, CGSizeMake(-2.5, 2.5), 3.0, shadowColor.CGColor);
 //        CGContextDrawPath(context, kCGPathFill);
-//    
-        CGContextAddPath(context, path);
+//
+    CGContextReplacePathWithStrokedPath(context);
     
+        CGContextAddPath(context, path);
         CGContextClip(context);
         CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
         CGFloat locations[] = { 0.0f,
@@ -51,9 +50,9 @@
     
          CGPoint textStartPoint = CGPointMake(rect.size.width - xRIGHTBUFFERFORBUBBLE - xRIGHTBUFFERFORTEXT - triangleHeight - tempSize.width, rect.origin.y + netYBUFFERFORCELL/2);
     
-        [_text drawInRect:CGRectMake(textStartPoint.x,textStartPoint.y,tempSize.width,tempSize.height) withFont:[UIFont fontWithName:@"Helvetica Neue" size:15] lineBreakMode:NSLineBreakByWordWrapping alignment:NSTextAlignmentLeft];
+        [self.text drawInRect:CGRectMake(textStartPoint.x,textStartPoint.y,tempSize.width,tempSize.height) withFont:[UIFont fontWithName:@"Helvetica Neue" size:15] lineBreakMode:NSLineBreakByWordWrapping alignment:NSTextAlignmentLeft];
     
-       // NSLog(@"%f %f",textStartPoint.x,textStartPoint.y);
+    
     
     }
 @end

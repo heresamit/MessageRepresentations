@@ -33,6 +33,7 @@
 		DFF78DA2174E15B9000A8962 /* EXPSimpleSendView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF78DA1174E15B9000A8962 /* EXPSimpleSendView.m */; };
 		DFF78DA5174E15C8000A8962 /* EXPSimpleReceiveView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF78DA4174E15C8000A8962 /* EXPSimpleReceiveView.m */; };
 		DFF78DA9174E1768000A8962 /* pathMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF78DA8174E1767000A8962 /* pathMethods.m */; };
+		DFF78DC8174F49D7000A8962 /* EXPCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF78DC7174F49D7000A8962 /* EXPCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,8 @@
 		DFF78DA4174E15C8000A8962 /* EXPSimpleReceiveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPSimpleReceiveView.m; sourceTree = "<group>"; };
 		DFF78DA7174E1767000A8962 /* pathMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pathMethods.h; sourceTree = "<group>"; };
 		DFF78DA8174E1767000A8962 /* pathMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pathMethods.m; sourceTree = "<group>"; };
+		DFF78DC6174F49D7000A8962 /* EXPCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPCell.h; sourceTree = "<group>"; };
+		DFF78DC7174F49D7000A8962 /* EXPCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +132,7 @@
 				DFF78D54174D38D3000A8962 /* EXPAppDelegate.h */,
 				DFF78D55174D38D3000A8962 /* EXPAppDelegate.m */,
 				DFF78D5D174D38D3000A8962 /* MainStoryboard.storyboard */,
+				DFF78DCA174F63BD000A8962 /* New Group */,
 				DFF78D75174D3DD9000A8962 /* Controllers */,
 				DFF78D76174D3DE5000A8962 /* Model */,
 				DFF78D77174D3DF3000A8962 /* Views */,
@@ -158,13 +162,10 @@
 			isa = PBXGroup;
 			children = (
 				DFF78D60174D38D3000A8962 /* EXPViewController.h */,
-				DFF78D7B174D4729000A8962 /* EXPFullyDrawnHeightsCachedViewController.h */,
-				DFF78D7C174D4729000A8962 /* EXPFullyDrawnHeightsCachedViewController.m */,
 				DFF78D61174D38D3000A8962 /* EXPViewController.m */,
-				DFF78D9A174DF63A000A8962 /* EXPSpecialViewController.h */,
-				DFF78D9B174DF63A000A8962 /* EXPSpecialViewController.m */,
-				DFF78D9D174E1498000A8962 /* EXPSimpleDrawnViewController.h */,
-				DFF78D9E174E1499000A8962 /* EXPSimpleDrawnViewController.m */,
+				DFF78DC3174F397F000A8962 /* Gradient Drawn */,
+				DFF78DC4174F398A000A8962 /* Image Method */,
+				DFF78DC5174F399C000A8962 /* No Gradient Drawn */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -183,18 +184,9 @@
 		DFF78D77174D3DF3000A8962 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DFF78D6B174D39AD000A8962 /* EXPSentMessageView.h */,
-				DFF78D6C174D39AD000A8962 /* EXPSentMessageView.m */,
-				DFF78D6F174D3B25000A8962 /* EXPReceivedMessageView.h */,
-				DFF78D70174D3B25000A8962 /* EXPReceivedMessageView.m */,
-				DFF78D8D174DECBB000A8962 /* EXPSpecialTableView.h */,
-				DFF78D8E174DECBB000A8962 /* EXPSpecialTableView.m */,
-				DFF78D90174DF116000A8962 /* EXPSpecialTableViewCell.h */,
-				DFF78D91174DF116000A8962 /* EXPSpecialTableViewCell.m */,
-				DFF78DA3174E15C7000A8962 /* EXPSimpleReceiveView.h */,
-				DFF78DA4174E15C8000A8962 /* EXPSimpleReceiveView.m */,
-				DFF78DA0174E15B9000A8962 /* EXPSimpleSendView.h */,
-				DFF78DA1174E15B9000A8962 /* EXPSimpleSendView.m */,
+				DFF78DC0174F38CD000A8962 /* Gradient Drawn */,
+				DFF78DC1174F38FD000A8962 /* Image Method */,
+				DFF78DC2174F392C000A8962 /* No Gradient Drawn */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -208,6 +200,75 @@
 				DFF78DA8174E1767000A8962 /* pathMethods.m */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		DFF78DC0174F38CD000A8962 /* Gradient Drawn */ = {
+			isa = PBXGroup;
+			children = (
+				DFF78D6B174D39AD000A8962 /* EXPSentMessageView.h */,
+				DFF78D6C174D39AD000A8962 /* EXPSentMessageView.m */,
+				DFF78D6F174D3B25000A8962 /* EXPReceivedMessageView.h */,
+				DFF78D70174D3B25000A8962 /* EXPReceivedMessageView.m */,
+			);
+			name = "Gradient Drawn";
+			sourceTree = "<group>";
+		};
+		DFF78DC1174F38FD000A8962 /* Image Method */ = {
+			isa = PBXGroup;
+			children = (
+				DFF78D8D174DECBB000A8962 /* EXPSpecialTableView.h */,
+				DFF78D8E174DECBB000A8962 /* EXPSpecialTableView.m */,
+				DFF78D90174DF116000A8962 /* EXPSpecialTableViewCell.h */,
+				DFF78D91174DF116000A8962 /* EXPSpecialTableViewCell.m */,
+				DFF78DC6174F49D7000A8962 /* EXPCell.h */,
+				DFF78DC7174F49D7000A8962 /* EXPCell.m */,
+			);
+			name = "Image Method";
+			sourceTree = "<group>";
+		};
+		DFF78DC2174F392C000A8962 /* No Gradient Drawn */ = {
+			isa = PBXGroup;
+			children = (
+				DFF78DA3174E15C7000A8962 /* EXPSimpleReceiveView.h */,
+				DFF78DA4174E15C8000A8962 /* EXPSimpleReceiveView.m */,
+				DFF78DA0174E15B9000A8962 /* EXPSimpleSendView.h */,
+				DFF78DA1174E15B9000A8962 /* EXPSimpleSendView.m */,
+			);
+			name = "No Gradient Drawn";
+			sourceTree = "<group>";
+		};
+		DFF78DC3174F397F000A8962 /* Gradient Drawn */ = {
+			isa = PBXGroup;
+			children = (
+				DFF78D7B174D4729000A8962 /* EXPFullyDrawnHeightsCachedViewController.h */,
+				DFF78D7C174D4729000A8962 /* EXPFullyDrawnHeightsCachedViewController.m */,
+			);
+			name = "Gradient Drawn";
+			sourceTree = "<group>";
+		};
+		DFF78DC4174F398A000A8962 /* Image Method */ = {
+			isa = PBXGroup;
+			children = (
+				DFF78D9A174DF63A000A8962 /* EXPSpecialViewController.h */,
+				DFF78D9B174DF63A000A8962 /* EXPSpecialViewController.m */,
+			);
+			name = "Image Method";
+			sourceTree = "<group>";
+		};
+		DFF78DC5174F399C000A8962 /* No Gradient Drawn */ = {
+			isa = PBXGroup;
+			children = (
+				DFF78D9D174E1498000A8962 /* EXPSimpleDrawnViewController.h */,
+				DFF78D9E174E1499000A8962 /* EXPSimpleDrawnViewController.m */,
+			);
+			name = "No Gradient Drawn";
+			sourceTree = "<group>";
+		};
+		DFF78DCA174F63BD000A8962 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +356,7 @@
 				DFF78DA2174E15B9000A8962 /* EXPSimpleSendView.m in Sources */,
 				DFF78DA5174E15C8000A8962 /* EXPSimpleReceiveView.m in Sources */,
 				DFF78DA9174E1768000A8962 /* pathMethods.m in Sources */,
+				DFF78DC8174F49D7000A8962 /* EXPCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

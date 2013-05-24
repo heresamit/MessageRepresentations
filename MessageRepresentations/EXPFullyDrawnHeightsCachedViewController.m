@@ -12,6 +12,8 @@
 #import "EXPReceivedMessageView.h"
 #import "constants.h"
 #import  <QuartzCore/QuartzCore.h>
+#define HOST @"Host"
+#define RESPONDER @"Responder"
 
 @interface EXPFullyDrawnHeightsCachedViewController ()
 
@@ -49,43 +51,40 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *CellIdentifier;
-    
+       
     // Configure the cell...
-    CGFloat textXBuffer;
     
+//    UITableViewCell *cell1 = [tableView dequeueReusableCellWithIdentifier:HOST];
+//    cell1.textLabel.text = messages.messageArray[indexPath.row][1];
+//    return cell1;
+
+       
     BOOL temp = [[[self.messages.messageArray objectAtIndex:indexPath.row] objectAtIndex:0] boolValue];
     if(temp)
     {
-        //  _kXBuffer = cell.frame.size.width - _bubbleWidth - avatarWidth;
-        textXBuffer = 10.0f;
-        CellIdentifier = @"Host";
-        
-        
-        EXPSentMessageView *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-        if (!cell) {
-            cell = [[EXPSentMessageView alloc] init];
-            // or your custom initialization
-        }
-        cell.layer.shouldRasterize = YES;
+        EXPSentMessageView *cell = [tableView dequeueReusableCellWithIdentifier:HOST];
         cell.size = [messages.heightArray objectAtIndex:indexPath.row];
         cell.text = [[messages.messageArray objectAtIndex:indexPath.row] objectAtIndex:1];
+        cell.layer.shouldRasterize = YES;
+        
+//        if(_isPathCached)
+//        {
+//            cell.pathObj = [messages.pathArray objectAtIndex:indexPath.row];
+//            cell.isPathCached = YES;
+//        }
+//        else
+//            cell.isPathCached = NO;
+//
         return cell;
         
     }
     
     else
     {
-        textXBuffer = 19.0f;
-        CellIdentifier = @"Responder";
-        EXPReceivedMessageView *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-        if (!cell) {
-            cell = [[EXPReceivedMessageView alloc] init];
-            // or your custom initialization
-        }
-        cell.layer.shouldRasterize = YES;
-        cell.size = [messages.heightArray objectAtIndex:indexPath.row] ;
+        EXPSentMessageView *cell = [tableView dequeueReusableCellWithIdentifier:RESPONDER];
+        cell.size = [messages.heightArray objectAtIndex:indexPath.row];
         cell.text = [[messages.messageArray objectAtIndex:indexPath.row] objectAtIndex:1];
+        cell.layer.shouldRasterize = YES;
         return cell;
         
     }

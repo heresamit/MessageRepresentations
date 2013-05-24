@@ -10,6 +10,8 @@
 #import "EXPSimpleReceiveView.h"
 #import "EXPSimpleSendView.h"
 #import "constants.h"
+#define HOST @"Host"
+#define RESPONDER @"Responder"
 
 @interface EXPSimpleDrawnViewController ()
 
@@ -27,48 +29,46 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *CellIdentifier;
-    
-    // Configure the cell...
-    CGFloat textXBuffer;
-    
     BOOL temp = [[[self.messages.messageArray objectAtIndex:indexPath.row] objectAtIndex:0] boolValue];
     if(temp)
     {
         //  _kXBuffer = cell.frame.size.width - _bubbleWidth - avatarWidth;
-        textXBuffer = 10.0f;
-        CellIdentifier = @"Host";
-        
-        
-        EXPSimpleSendView *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-        if (!cell) {
-            cell = [[EXPSimpleSendView alloc] init];
-            // or your custom initialization
-        }
+
+        EXPSimpleSendView *cell = [tableView dequeueReusableCellWithIdentifier:HOST];
+//        if (!cell) {
+//            cell = [[EXPSimpleSendView alloc] init];
+//                       // or your custom initialization
+//        }
         cell.size = [messages.heightArray objectAtIndex:indexPath.row];
         cell.text = [[messages.messageArray objectAtIndex:indexPath.row] objectAtIndex:1];
-      //  cell.layer.shouldRasterize = YES;
+        cell.layer.shouldRasterize = YES;
+
         return cell;
         
     }
     
     else
     {
-        textXBuffer = 19.0f;
-        CellIdentifier = @"Responder";
-        EXPSimpleReceiveView *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-        if (!cell) {
-            cell = [[EXPSimpleReceiveView alloc] init];
-            // or your custom initialization
-        }
+       
+        EXPSimpleReceiveView *cell = [tableView dequeueReusableCellWithIdentifier:RESPONDER];
+//        if (!cell) {
+//            cell = [[EXPSimpleReceiveView alloc] init];
+//            // or your custom initialization
+//                    }
+
         cell.size = [messages.heightArray objectAtIndex:indexPath.row];
         cell.text = [[messages.messageArray objectAtIndex:indexPath.row] objectAtIndex:1];
+        cell.layer.shouldRasterize = YES;
+
         return cell;
         
     }
 }
 
-
+- (void) tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

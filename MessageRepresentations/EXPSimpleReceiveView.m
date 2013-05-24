@@ -12,6 +12,7 @@
 @implementation EXPSimpleReceiveView
 @synthesize text = _text;
 @synthesize size = _size;
+
 - (void)drawRect:(CGRect)rect {
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGSize tempSize = [_size CGSizeValue];

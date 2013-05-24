@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "EXPAppDataSource.h"
+#import  <QuartzCore/QuartzCore.h>
+
 @interface EXPSimpleDrawnViewController : UITableViewController
 @property (nonatomic,weak) EXPAppDataSource *messages;
 @end
