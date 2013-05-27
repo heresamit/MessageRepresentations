@@ -45,49 +45,24 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    //NSLog(@"%d",messages.messageArray.count);
     return messages.messageArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-       
-    // Configure the cell...
-    
-//    UITableViewCell *cell1 = [tableView dequeueReusableCellWithIdentifier:HOST];
-//    cell1.textLabel.text = messages.messageArray[indexPath.row][1];
-//    return cell1;
-
-       
-    BOOL temp = [[[self.messages.messageArray objectAtIndex:indexPath.row] objectAtIndex:0] boolValue];
+    BOOL temp = [[self.messages.messageArray[indexPath.row] objectAtIndex:0] boolValue];
+    NSString *abc;
     if(temp)
-    {
-        EXPSentMessageView *cell = [tableView dequeueReusableCellWithIdentifier:HOST];
-        cell.size = [messages.heightArray objectAtIndex:indexPath.row];
-        cell.text = [[messages.messageArray objectAtIndex:indexPath.row] objectAtIndex:1];
-        cell.layer.shouldRasterize = YES;
-        
-//        if(_isPathCached)
-//        {
-//            cell.pathObj = [messages.pathArray objectAtIndex:indexPath.row];
-//            cell.isPathCached = YES;
-//        }
-//        else
-//            cell.isPathCached = NO;
-//
-        return cell;
-        
-    }
-    
+        abc = @"Host";
     else
-    {
-        EXPSentMessageView *cell = [tableView dequeueReusableCellWithIdentifier:RESPONDER];
-        cell.size = [messages.heightArray objectAtIndex:indexPath.row];
-        cell.text = [[messages.messageArray objectAtIndex:indexPath.row] objectAtIndex:1];
-        cell.layer.shouldRasterize = YES;
-        return cell;
-        
-    }
+        abc = @"Responder";
+    
+    EXPReceivedMessageView *cell = [tableView dequeueReusableCellWithIdentifier:abc];
+    cell.layer.shouldRasterize = YES;
+    cell.size = messages.heightArray[indexPath.row];
+    cell.text = messages.messageArray[indexPath.row][1];
+    [cell setNeedsDisplay];
+    return cell;
 }
 
 
@@ -108,6 +83,6 @@
 {
     //CGRect frame = {CGPointMake(0,0),[[[messages.messageArray objectAtIndex:indexPath.row] objectAtIndex:1] sizeWithFont:        [UIFont fontWithName:@"Helvetica Neue" size:15] forWidth:100 lineBreakMode:NSLineBreakByWordWrapping]};
     
-    return [[messages.heightArray objectAtIndex:indexPath.row] CGSizeValue].height + netYBUFFERFORCELL;
+    return [messages.heightArray[indexPath.row] CGSizeValue].height + netYBUFFERFORCELL;
 }
 @end

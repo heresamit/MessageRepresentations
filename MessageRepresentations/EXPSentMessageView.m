@@ -23,9 +23,9 @@
     
 //        CGContextAddPath(context, path);
 //        UIColor * shadowColor = [UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:1];
-//        CGContextSetShadowWithColor(context, CGSizeMake(-2.5, 2.5), 3.0, shadowColor.CGColor);
+//        CGContextSetShadowWithColor(context, CGSizeMake(-2.5, 2.5), 3.0,   shadowColor.CGColor);
 //        CGContextDrawPath(context, kCGPathFill);
-//
+
     CGContextReplacePathWithStrokedPath(context);
     
         CGContextAddPath(context, path);

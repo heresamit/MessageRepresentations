@@ -41,12 +41,12 @@
 //        }
         cell.size = [messages.heightArray objectAtIndex:indexPath.row];
         cell.text = [[messages.messageArray objectAtIndex:indexPath.row] objectAtIndex:1];
+                [cell setNeedsDisplay];
         cell.layer.shouldRasterize = YES;
 
         return cell;
         
     }
-    
     else
     {
        
@@ -58,6 +58,7 @@
 
         cell.size = [messages.heightArray objectAtIndex:indexPath.row];
         cell.text = [[messages.messageArray objectAtIndex:indexPath.row] objectAtIndex:1];
+        [cell setNeedsDisplay];
         cell.layer.shouldRasterize = YES;
 
         return cell;
