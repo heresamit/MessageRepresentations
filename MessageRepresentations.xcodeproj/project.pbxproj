@@ -14,6 +14,7 @@
 		DF4EB107175473D300633ED2 /* EFCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4EB102175473D300633ED2 /* EFCellData.m */; };
 		DF4EB10A1754745200633ED2 /* avatarPlaceHolder.png in Resources */ = {isa = PBXBuildFile; fileRef = DF4EB1081754745200633ED2 /* avatarPlaceHolder.png */; };
 		DF4EB10B1754745200633ED2 /* avatarPlaceHolder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF4EB1091754745200633ED2 /* avatarPlaceHolder@2x.png */; };
+		DF4EB111175483C400633ED2 /* EXPLazyDrawnCachedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4EB110175483C400633ED2 /* EXPLazyDrawnCachedTableViewController.m */; };
 		DFF78D46174D38D3000A8962 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF78D45174D38D3000A8962 /* UIKit.framework */; };
 		DFF78D48174D38D3000A8962 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF78D47174D38D3000A8962 /* Foundation.framework */; };
 		DFF78D4A174D38D3000A8962 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF78D49174D38D3000A8962 /* CoreGraphics.framework */; };
@@ -56,6 +57,8 @@
 		DF4EB102175473D300633ED2 /* EFCellData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFCellData.m; sourceTree = "<group>"; };
 		DF4EB1081754745200633ED2 /* avatarPlaceHolder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatarPlaceHolder.png; sourceTree = "<group>"; };
 		DF4EB1091754745200633ED2 /* avatarPlaceHolder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatarPlaceHolder@2x.png"; sourceTree = "<group>"; };
+		DF4EB10F175483C400633ED2 /* EXPLazyDrawnCachedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPLazyDrawnCachedTableViewController.h; sourceTree = "<group>"; };
+		DF4EB110175483C400633ED2 /* EXPLazyDrawnCachedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPLazyDrawnCachedTableViewController.m; sourceTree = "<group>"; };
 		DFF78D41174D38D3000A8962 /* MessageRepresentations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageRepresentations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFF78D45174D38D3000A8962 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DFF78D47174D38D3000A8962 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -298,6 +301,8 @@
 				DF4EB100175473D300633ED2 /* EFTableViewController.m */,
 				DF4EB101175473D300633ED2 /* EFCellData.h */,
 				DF4EB102175473D300633ED2 /* EFCellData.m */,
+				DF4EB10F175483C400633ED2 /* EXPLazyDrawnCachedTableViewController.h */,
+				DF4EB110175483C400633ED2 /* EXPLazyDrawnCachedTableViewController.m */,
 			);
 			name = EFMethod;
 			sourceTree = "<group>";
@@ -395,6 +400,7 @@
 				DF4EB105175473D300633ED2 /* EFCustomView.m in Sources */,
 				DF4EB106175473D300633ED2 /* EFTableViewController.m in Sources */,
 				DF4EB107175473D300633ED2 /* EFCellData.m in Sources */,
+				DF4EB111175483C400633ED2 /* EXPLazyDrawnCachedTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -37,7 +37,9 @@
                             <outlet property="delegate" destination="AgW-4Z-tTn" id="349-f4-hOk"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Drawn Without Gradient (Lazy)" id="Qr0-ZZ-iKF"/>
+                    <navigationItem key="navigationItem" title="Drawn Without Gradient (Lazy)" id="Qr0-ZZ-iKF">
+                        <barButtonItem key="backBarButtonItem" title="Menu" id="AKZ-Bh-fT5"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WrN-CY-tac" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -52,16 +54,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Stretched image and UILabel" id="4q3-LG-CxP"/>
+                    <navigationItem key="navigationItem" title="Stretched image and UILabel" id="4q3-LG-CxP">
+                        <barButtonItem key="backBarButtonItem" title="Menu" id="Zlb-Ed-eC8"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="bubbleTableView" destination="DGc-dL-m6b" id="l4u-2f-SEw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bCz-n3-Kny" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2171" y="-734"/>
+            <point key="canvasLocation" x="2211" y="-998"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Table View Controller - Select Implementation-->
         <scene sceneID="ab1-uZ-3fE">
             <objects>
                 <tableViewController id="Yq7-oZ-lyd" sceneMemberID="viewController">
@@ -72,8 +76,29 @@
                         <sections>
                             <tableViewSection id="Tt4-fs-Gol">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="laH-V2-1SJ" style="IBUITableViewCellStyleDefault" id="OfB-XO-V9D">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="MfG-GJ-A2a" style="IBUITableViewCellStyleDefault" id="p17-EN-EUR">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Lazy drawn, Cached Views" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MfG-GJ-A2a">
+                                                    <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <segue destination="CqV-Og-FrK" kind="push" id="HFA-D0-hmq"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="laH-V2-1SJ" style="IBUITableViewCellStyleDefault" id="OfB-XO-V9D">
+                                        <rect key="frame" x="0.0" y="44" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
@@ -94,7 +119,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="GbG-i0-rc8" style="IBUITableViewCellStyleDefault" id="oGX-l6-W2g">
-                                        <rect key="frame" x="0.0" y="44" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="88" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
@@ -115,14 +140,14 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Umn-8y-g6N" style="IBUITableViewCellStyleDefault" id="OU9-CN-dCt">
-                                        <rect key="frame" x="0.0" y="88" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="132" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Drawn Without Gradient (Lazy)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Umn-8y-g6N">
-                                                    <rect key="frame" x="10" y="0.0" width="293" height="43"/>
+                                                    <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -136,7 +161,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Axa-T5-Bxl" style="IBUITableViewCellStyleDefault" id="noM-L1-CRt">
-                                        <rect key="frame" x="0.0" y="132" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="176" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
@@ -164,7 +189,7 @@
                             <outlet property="delegate" destination="Yq7-oZ-lyd" id="zma-q5-RfM"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="hEM-SE-ZkX"/>
+                    <navigationItem key="navigationItem" title="Select Implementation" id="hEM-SE-ZkX"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tQh-8q-8QL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -204,11 +229,46 @@
                             <outlet property="delegate" destination="NI7-Yr-r5v" id="o09-Se-TM4"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Drawn with Gradient (Lazy)" id="FNL-t3-G8f"/>
+                    <navigationItem key="navigationItem" title="Drawn with Gradient (Lazy)" id="FNL-t3-G8f">
+                        <barButtonItem key="backBarButtonItem" title="Menu" id="iTJ-bI-Xew"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZAa-Xk-eYe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1615" y="-2329"/>
+        </scene>
+        <!--Lazy Drawn Cached Table View Controller - Lazy drawn, Cached Views-->
+        <scene sceneID="TRe-KJ-3Ye">
+            <objects>
+                <tableViewController id="CqV-Og-FrK" customClass="EXPLazyDrawnCachedTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="z5N-Oj-Jam">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EFCell" id="FLv-J7-WTZ" customClass="EFTableViewCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="CqV-Og-FrK" id="s6p-WR-8to"/>
+                            <outlet property="delegate" destination="CqV-Og-FrK" id="gcG-f5-UAc"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Lazy drawn, Cached Views" id="7cL-GL-RCR">
+                        <barButtonItem key="backBarButtonItem" title="Menu" id="xrP-Nz-2eC"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k8A-f9-RNW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="260" y="-2577"/>
         </scene>
         <!--Table View Controller - Predrawn, Cached Views-->
         <scene sceneID="guy-g5-gsF">
@@ -235,7 +295,9 @@
                             <outlet property="delegate" destination="278-LE-Sum" id="gVa-Vb-Yeu"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Predrawn, Cached Views" id="xZU-G3-HYR"/>
+                    <navigationItem key="navigationItem" title="Predrawn, Cached Views" id="xZU-G3-HYR">
+                        <barButtonItem key="backBarButtonItem" title="Menu" id="XBV-8y-6PA"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WaE-rA-8wq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -269,6 +331,9 @@
         </class>
         <class className="EXPFullyDrawnHeightsCachedViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/EXPFullyDrawnHeightsCachedViewController.h"/>
+        </class>
+        <class className="EXPLazyDrawnCachedTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EXPLazyDrawnCachedTableViewController.h"/>
         </class>
         <class className="EXPReceivedMessageView" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/EXPReceivedMessageView.h"/>

@@ -50,4 +50,46 @@
     
     return self;
 }
+
+-(id) initWithTextWithoutViewCreation:(NSString *)text withType:(typeOfBubble)type withImage:(UIImage *)avatarImage
+{
+    self = [super init];
+    if (self)
+    {
+        //calculate size for this amount of text
+        //calculate size and store in self.size
+        //alloc and create custom view depending on its type using size calculated above
+        
+        CGSize tempSize = [text sizeWithFont:[UIFont fontWithName:@"Helvetica Neue" size:15.0f] constrainedToSize:CGSizeMake(MAXTEXTWIDTH,INFINITY)  lineBreakMode:NSLineBreakByWordWrapping];// can font be reused?
+        
+        _sizeOfCell = [NSValue valueWithCGSize:tempSize];
+        _text = text;
+        _type = type;
+        _avatarImage = avatarImage;
+        _viewHasBeenCreated = NO;
+    }
+    return self;
+}
+
+-(void) drawView
+{
+    CGSize tempSize = [_sizeOfCell CGSizeValue];
+    CGFloat temp = tempSize.width + XBUBBLEBUFFER + XTEXTBUFFER + AVATARPICWIDTH + AVATARXBUFFER + triangleHeight;
+    
+    switch (_type) {
+        case readSentWithAvatar:
+            _customView = [[EFCustomView alloc] initWithFrame:CGRectMake( [[UIScreen mainScreen] bounds].size.width - temp, 0.0f,temp, MAX(tempSize.height + YTEXTBUFFER , AVATARPICHEIGHT) + YCELLBUFFER) withType:_type withText:_text withTextFrameSize:tempSize withImage:_avatarImage];
+            break;
+            
+        case receivedWithAvatar:
+            
+            _customView = [[EFCustomView alloc] initWithFrame:CGRectMake(0.0f,0.0f,temp,MAX(tempSize.height + YTEXTBUFFER , AVATARPICHEIGHT) + YCELLBUFFER) withType:_type withText:_text withTextFrameSize:tempSize withImage:_avatarImage];
+            break;
+            
+        default:
+            break;
+    }
+    _viewHasBeenCreated = YES;
+    _customView.backgroundColor = [UIColor clearColor];
+}
 @end

@@ -17,7 +17,9 @@
 @property (nonatomic) typeOfBubble type;
 @property (nonatomic,strong) NSString* text;
 @property (nonatomic, weak) UIImage *avatarImage;
+@property (nonatomic) BOOL viewHasBeenCreated;
 
 -(id) initWithText:(NSString *)text withType:(typeOfBubble)type withImage:(UIImage *)avatarImage;
-//-(id) initWithView:(UIView *)view;
+-(id) initWithTextWithoutViewCreation:(NSString *)text withType:(typeOfBubble)type withImage:(UIImage *)avatarImage;
+-(void) drawView;
 @end

@@ -1,44 +1,31 @@
 //
-//  EFTableViewController.m
-//  ExtremelyFastMessageTable
+//  EXPLazyDrawnCachedTableViewController.m
+//  MessageRepresentations
 //
-//  Created by Amit Chowdhary on 27/05/13.
+//  Created by Amit Chowdhary on 28/05/13.
 //  Copyright (c) 2013 Amit Chowdhary. All rights reserved.
 //
 
-#import "EFTableViewController.h"
-#import "EFTableViewCell.h"
+#import "EXPLazyDrawnCachedTableViewController.h"
 #import "EFCellData.h"
-#import "Constants.h"
+#import "constants.h"
+#import "EFTableViewCell.h"
 
-@interface EFTableViewController ()
-
+@interface EXPLazyDrawnCachedTableViewController ()
+@property (nonatomic,strong) NSMutableArray *tempArray;
+@property (nonatomic,strong) UIImage *avatarImage1;
+@property (nonatomic,strong) UIImage *avatarImage2;
 @end
 
-@implementation EFTableViewController
-
-
+@implementation EXPLazyDrawnCachedTableViewController
 - (void)parseData
 {
-    _dataArray = [[NSMutableArray alloc] init];
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"MessageFile" ofType:@"plist"];
-    NSMutableArray *tempArray = [[NSMutableArray alloc] initWithContentsOfFile:path];
-    UIImage *avatarImage1 = [UIImage imageNamed:@"avatarPlaceHolder.png"];
-    UIImage *avatarImage2 = [UIImage imageNamed:@"avatarPlaceHolder.png"];
-    for(NSArray *obj in tempArray)
-    {
-        if([obj[0] boolValue])
-        {
-            [_dataArray addObject:[[EFCellData alloc] initWithText:obj[1] withType:readSentWithAvatar withImage:avatarImage1]];
-        }
-        else
-        {
-            [_dataArray addObject:[[EFCellData alloc] initWithText:obj[1] withType:receivedWithAvatar withImage:avatarImage2]];
-        }
-        
-    }
-    //NSLog(@"%@",dataArray);
+    _tempArray = [[NSMutableArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"MessageFile" ofType:@"plist"]];
+    _avatarImage1 = [UIImage imageNamed:@"avatarPlaceHolder.png"];
+    _avatarImage2 = [UIImage imageNamed:@"avatarPlaceHolder.png"];
+    _dataDictionary = [[NSMutableDictionary alloc] initWithCapacity:_tempArray.count];
 }
+
 -(id) initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
@@ -47,7 +34,7 @@
         // Custom initialization
     }
     return self;
-
+    
     
 }
 
@@ -60,7 +47,6 @@
     }
     return self;
 }
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -75,6 +61,7 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+    NSLog(@"Memory Warning.");
     // Dispose of any resources that can be recreated.
 }
 
@@ -82,55 +69,52 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    //#warning Potentially incomplete method implementation.
-    // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    //#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return [_dataArray count];
+    return _tempArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"EFCell";
-    EFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    // Configure the cell...
-    EFCellData *data = _dataArray[indexPath.row];
-
+    NSNumber *tempNumber = [NSNumber numberWithInteger:indexPath.row];
+    EFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EFCell"];
+    EFCellData *data = [_dataDictionary objectForKey:tempNumber];
+    
+    if(!data.viewHasBeenCreated)
+        [data drawView];
+    
     if(self.interfaceOrientation != UIInterfaceOrientationPortrait && data.type == readSentWithAvatar)
         [data.customView shiftFrameForLandScape];
     else if(data.type == readSentWithAvatar)
         [data.customView shiftFrameForPortrait];
-       
+    
     cell.data = data;
-       
+    // Configure the cell...
+    
     return cell;
 }
-
 -(void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
     UITableViewCell *tempCell;
     for (NSIndexPath *path in [self.tableView indexPathsForVisibleRows]) {
         tempCell = [self.tableView cellForRowAtIndexPath:path];
-            for(EFCustomView *obj in tempCell.contentView.subviews)
+        for(EFCustomView *obj in tempCell.contentView.subviews)
+        {
+            if(obj.type == readSentWithAvatar)
             {
-                if(obj.type == readSentWithAvatar)
-                {
-                    if(toInterfaceOrientation != UIInterfaceOrientationPortraitUpsideDown && toInterfaceOrientation != UIInterfaceOrientationPortrait)
-                        [obj shiftFrameForLandScape];
-                    else
-                        [obj shiftFrameForPortrait];
-                }
+                if(toInterfaceOrientation != UIInterfaceOrientationPortraitUpsideDown && toInterfaceOrientation != UIInterfaceOrientationPortrait)
+                    [obj shiftFrameForLandScape];
+                else
+                    [obj shiftFrameForPortrait];
             }
         }
-       
-
+    }
+    
+    
 }
-
 
 
 /*
@@ -171,10 +155,6 @@
     return YES;
 }
 */
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
-{
-    return !(toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown);
-}
 
 #pragma mark - Table view delegate
 
@@ -191,8 +171,25 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-   // NSLog(@"%d %f",indexPath.row,MAX(AVATARPICHEIGHT,[[_dataArray[indexPath.row] sizeOfCell] CGSizeValue].height + YCELLBUFFER + YTEXTBUFFER));
-    return MAX(AVATARPICHEIGHT,[[_dataArray[indexPath.row] sizeOfCell] CGSizeValue].height + YCELLBUFFER + YTEXTBUFFER);
+    NSNumber *tempNumber = [NSNumber numberWithInteger:indexPath.row];
+    EFCellData *data;
+    if(!([_dataDictionary objectForKey:tempNumber]))
+    {
+        if([_tempArray[indexPath.row][0] boolValue])
+        {
+            data = [[EFCellData alloc] initWithTextWithoutViewCreation:_tempArray[indexPath.row][1] withType:readSentWithAvatar withImage:_avatarImage1];
+        }
+        else
+        {
+            data = [[EFCellData alloc] initWithTextWithoutViewCreation:_tempArray[indexPath.row][1] withType:receivedWithAvatar withImage:_avatarImage2];
+        }
+        [_dataDictionary setObject:data forKey:tempNumber];
+    }
+    else
+        data = [_dataDictionary objectForKey:tempNumber];
+    
+    return MAX(AVATARPICHEIGHT,[[data sizeOfCell] CGSizeValue].height + YCELLBUFFER + YTEXTBUFFER);
+   
 }
 
 @end
