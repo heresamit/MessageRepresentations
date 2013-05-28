@@ -96,6 +96,12 @@
     
     return cell;
 }
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+{
+    return !(toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown);
+}
+
 -(void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
     UITableViewCell *tempCell;
