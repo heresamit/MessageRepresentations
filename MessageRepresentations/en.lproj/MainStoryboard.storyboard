@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
     </dependencies>
     <scenes>
-        <!--Simple Drawn View Controller-->
+        <!--Simple Drawn View Controller - Drawn Without Gradient (Lazy)-->
         <scene sceneID="CzU-Qs-Hs5">
             <objects>
                 <tableViewController id="AgW-4Z-tTn" customClass="EXPSimpleDrawnViewController" sceneMemberID="viewController">
@@ -37,13 +37,13 @@
                             <outlet property="delegate" destination="AgW-4Z-tTn" id="349-f4-hOk"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Qr0-ZZ-iKF"/>
+                    <navigationItem key="navigationItem" title="Drawn Without Gradient (Lazy)" id="Qr0-ZZ-iKF"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WrN-CY-tac" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1155" y="666"/>
+            <point key="canvasLocation" x="2539" y="-1462"/>
         </scene>
-        <!--Special View Controller-->
+        <!--Special View Controller - Stretched image and UILabel-->
         <scene sceneID="geJ-MA-cky">
             <objects>
                 <viewController id="fvD-gv-nDN" customClass="EXPSpecialViewController" sceneMemberID="viewController">
@@ -52,14 +52,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tableView>
-                    <navigationItem key="navigationItem" id="4q3-LG-CxP"/>
+                    <navigationItem key="navigationItem" title="Stretched image and UILabel" id="4q3-LG-CxP"/>
                     <connections>
                         <outlet property="bubbleTableView" destination="DGc-dL-m6b" id="l4u-2f-SEw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bCz-n3-Kny" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1155" y="-166"/>
+            <point key="canvasLocation" x="2131" y="-1998"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="ab1-uZ-3fE">
@@ -79,10 +79,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Model 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="laH-V2-1SJ">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Predrawn, Cached Views" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="laH-V2-1SJ">
                                                     <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
@@ -100,10 +100,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Model 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GbG-i0-rc8">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Drawn with Gradient (Lazy)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GbG-i0-rc8">
                                                     <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
@@ -121,10 +121,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Model 3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Umn-8y-g6N">
-                                                    <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Drawn Without Gradient (Lazy)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Umn-8y-g6N">
+                                                    <rect key="frame" x="10" y="0.0" width="293" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
@@ -132,7 +132,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
-                                            <segue destination="fvD-gv-nDN" kind="push" id="xBD-Zd-M1V"/>
+                                            <segue destination="fvD-gv-nDN" kind="push" id="JOG-Om-elA"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Axa-T5-Bxl" style="IBUITableViewCellStyleDefault" id="noM-L1-CRt">
@@ -142,10 +142,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Model 4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Axa-T5-Bxl">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Stretched image and UILabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Axa-T5-Bxl">
                                                     <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
@@ -153,7 +153,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
-                                            <segue destination="AgW-4Z-tTn" kind="push" id="wIL-mX-wbL"/>
+                                            <segue destination="AgW-4Z-tTn" kind="push" id="oja-53-yXC"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -170,7 +170,7 @@
             </objects>
             <point key="canvasLocation" x="158" y="-1150"/>
         </scene>
-        <!--Fully Drawn Heights Cached View Controller - Fully Drawn Heights Cached-->
+        <!--Fully Drawn Heights Cached View Controller - Drawn with Gradient (Lazy)-->
         <scene sceneID="0zU-u8-J7b">
             <objects>
                 <tableViewController id="NI7-Yr-r5v" customClass="EXPFullyDrawnHeightsCachedViewController" sceneMemberID="viewController">
@@ -204,13 +204,13 @@
                             <outlet property="delegate" destination="NI7-Yr-r5v" id="o09-Se-TM4"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Fully Drawn Heights Cached" id="FNL-t3-G8f"/>
+                    <navigationItem key="navigationItem" title="Drawn with Gradient (Lazy)" id="FNL-t3-G8f"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZAa-Xk-eYe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1143" y="-1017"/>
+            <point key="canvasLocation" x="1615" y="-2329"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Table View Controller - Predrawn, Cached Views-->
         <scene sceneID="guy-g5-gsF">
             <objects>
                 <tableViewController id="278-LE-Sum" customClass="EFTableViewController" sceneMemberID="viewController">
@@ -235,11 +235,11 @@
                             <outlet property="delegate" destination="278-LE-Sum" id="gVa-Vb-Yeu"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="xZU-G3-HYR"/>
+                    <navigationItem key="navigationItem" title="Predrawn, Cached Views" id="xZU-G3-HYR"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WaE-rA-8wq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1116" y="-1824"/>
+            <point key="canvasLocation" x="1028" y="-2600"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qxh-Ma-s6G">
