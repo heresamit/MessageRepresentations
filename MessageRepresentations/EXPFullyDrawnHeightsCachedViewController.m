@@ -20,15 +20,29 @@
 @end
 
 @implementation EXPFullyDrawnHeightsCachedViewController
-@synthesize messages;
+
+-(id) initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        _messages = [[EXPAppDataSource alloc] init];
+        // Custom initialization
+    }
+    return self;
+    
+    
+}
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
+       _messages = [[EXPAppDataSource alloc] init];
         // Custom initialization
     }
     return self;
 }
+
 
 - (void)viewDidLoad
 {
@@ -45,7 +59,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return messages.messageArray.count;
+    return _messages.messageArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -56,8 +70,8 @@
         
         EXPSentMessageView *cell = [tableView dequeueReusableCellWithIdentifier:HOST];
  
-        cell.size = [messages.heightArray objectAtIndex:indexPath.row];
-        cell.text = [[messages.messageArray objectAtIndex:indexPath.row] objectAtIndex:1];
+        cell.size = [_messages.heightArray objectAtIndex:indexPath.row];
+        cell.text = [[_messages.messageArray objectAtIndex:indexPath.row] objectAtIndex:1];
         cell.layer.shouldRasterize = YES;
         [cell setNeedsDisplay];
         return cell;
@@ -68,8 +82,8 @@
         
         EXPReceivedMessageView *cell = [tableView dequeueReusableCellWithIdentifier:RESPONDER];
  
-        cell.size = [messages.heightArray objectAtIndex:indexPath.row];
-        cell.text = [[messages.messageArray objectAtIndex:indexPath.row] objectAtIndex:1];
+        cell.size = [_messages.heightArray objectAtIndex:indexPath.row];
+        cell.text = [[_messages.messageArray objectAtIndex:indexPath.row] objectAtIndex:1];
         cell.layer.shouldRasterize = YES;
         [cell setNeedsDisplay];
         return cell;
@@ -95,6 +109,6 @@
 {
     //CGRect frame = {CGPointMake(0,0),[[[messages.messageArray objectAtIndex:indexPath.row] objectAtIndex:1] sizeWithFont:        [UIFont fontWithName:@"Helvetica Neue" size:15] forWidth:100 lineBreakMode:NSLineBreakByWordWrapping]};
     
-    return [messages.heightArray[indexPath.row] CGSizeValue].height + netYBUFFERFORCELL;
+    return [_messages.heightArray[indexPath.row] CGSizeValue].height + netYBUFFERFORCELL;
 }
 @end

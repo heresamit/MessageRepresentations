@@ -17,10 +17,44 @@
 
 @implementation EFTableViewController
 
+- (void)parseData
+{
+    _dataArray = [[NSMutableArray alloc] init];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"MessageFile" ofType:@"plist"];
+    NSMutableArray *tempArray = [[NSMutableArray alloc] initWithContentsOfFile:path];
+    UIImage *avatarImage1 = [UIImage imageNamed:@"avatarPlaceHolder.png"];
+    UIImage *avatarImage2 = [UIImage imageNamed:@"avatarPlaceHolder.png"];
+    for(NSArray *obj in tempArray)
+    {
+        if([obj[0] boolValue])
+        {
+            [_dataArray addObject:[[EFCellData alloc] initWithText:obj[1] withType:readSentWithAvatar withImage:avatarImage1]];
+        }
+        else
+        {
+            [_dataArray addObject:[[EFCellData alloc] initWithText:obj[1] withType:receivedWithAvatar withImage:avatarImage2]];
+        }
+        
+    }
+    //NSLog(@"%@",dataArray);
+}
+-(id) initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self parseData];
+        // Custom initialization
+    }
+    return self;
+
+    
+}
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
+        [self parseData];
         // Custom initialization
     }
     return self;

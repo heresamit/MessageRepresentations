@@ -16,9 +16,27 @@
 
 @implementation EXPSpecialViewController
 
-@synthesize messages = _messages;
-@synthesize dataForBubbles = _dataForBubbles;
-@synthesize bubbleTableView = _bubbleTableView;
+-(id) initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        _messages = [[EXPAppDataSource alloc] init];
+        // Custom initialization
+    }
+    return self;
+    
+    
+}
+
+- (id)initWithStyle:(UITableViewStyle)style
+{
+    self = [super initWithStyle:style];
+    if (self) {
+        _messages = [[EXPAppDataSource alloc] init];
+        // Custom initialization
+    }
+    return self;
+}
 
 
 - (void)viewDidLoad

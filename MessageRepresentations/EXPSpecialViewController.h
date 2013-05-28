@@ -11,11 +11,11 @@
 #import "EXPBubbleData.h"
 @class EXPSpecialTableView;
 
-@interface EXPSpecialViewController : UIViewController
+@interface EXPSpecialViewController : UITableViewController
 
 @property (strong, nonatomic) IBOutlet EXPSpecialTableView *bubbleTableView;
 
-@property (nonatomic, weak) EXPAppDataSource *messages;
+@property (nonatomic, strong) EXPAppDataSource *messages;
 
 - (NSInteger)rowsForBubbleTable:(EXPSpecialTableView *)tableView;
 - (EXPBubbleData *)bubbleTableView:(EXPSpecialTableView *)tableView dataForRow:(NSInteger)row;

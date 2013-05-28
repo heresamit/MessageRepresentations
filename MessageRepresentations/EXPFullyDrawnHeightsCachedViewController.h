@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 #import "EXPAppDataSource.h"
 @interface EXPFullyDrawnHeightsCachedViewController : UITableViewController
-@property (nonatomic,weak) EXPAppDataSource *messages;
+@property (nonatomic,strong) EXPAppDataSource *messages;
 @end

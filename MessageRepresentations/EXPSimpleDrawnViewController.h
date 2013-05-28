@@ -11,5 +11,5 @@
 #import  <QuartzCore/QuartzCore.h>
 
 @interface EXPSimpleDrawnViewController : UITableViewController
-@property (nonatomic,weak) EXPAppDataSource *messages;
+@property (nonatomic,strong) EXPAppDataSource *messages;
 @end

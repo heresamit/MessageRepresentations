@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface EFTableViewController : UITableViewController
-@property (nonatomic,weak) NSMutableArray *dataArray;
+@property (nonatomic,strong) NSMutableArray *dataArray;
 @end
