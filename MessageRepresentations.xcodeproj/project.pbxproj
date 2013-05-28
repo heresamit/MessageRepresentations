@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF4EB103175473D300633ED2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4EB0FA175473D300633ED2 /* ViewController.m */; };
+		DF4EB104175473D300633ED2 /* EFTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4EB0FC175473D300633ED2 /* EFTableViewCell.m */; };
+		DF4EB105175473D300633ED2 /* EFCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4EB0FE175473D300633ED2 /* EFCustomView.m */; };
+		DF4EB106175473D300633ED2 /* EFTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4EB100175473D300633ED2 /* EFTableViewController.m */; };
+		DF4EB107175473D300633ED2 /* EFCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4EB102175473D300633ED2 /* EFCellData.m */; };
+		DF4EB10A1754745200633ED2 /* avatarPlaceHolder.png in Resources */ = {isa = PBXBuildFile; fileRef = DF4EB1081754745200633ED2 /* avatarPlaceHolder.png */; };
+		DF4EB10B1754745200633ED2 /* avatarPlaceHolder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF4EB1091754745200633ED2 /* avatarPlaceHolder@2x.png */; };
 		DFF78D46174D38D3000A8962 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF78D45174D38D3000A8962 /* UIKit.framework */; };
 		DFF78D48174D38D3000A8962 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF78D47174D38D3000A8962 /* Foundation.framework */; };
 		DFF78D4A174D38D3000A8962 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF78D49174D38D3000A8962 /* CoreGraphics.framework */; };
@@ -37,6 +44,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF4EB0F9175473D300633ED2 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DF4EB0FA175473D300633ED2 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DF4EB0FB175473D300633ED2 /* EFTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFTableViewCell.h; sourceTree = "<group>"; };
+		DF4EB0FC175473D300633ED2 /* EFTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFTableViewCell.m; sourceTree = "<group>"; };
+		DF4EB0FD175473D300633ED2 /* EFCustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFCustomView.h; sourceTree = "<group>"; };
+		DF4EB0FE175473D300633ED2 /* EFCustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFCustomView.m; sourceTree = "<group>"; };
+		DF4EB0FF175473D300633ED2 /* EFTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFTableViewController.h; sourceTree = "<group>"; };
+		DF4EB100175473D300633ED2 /* EFTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFTableViewController.m; sourceTree = "<group>"; };
+		DF4EB101175473D300633ED2 /* EFCellData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFCellData.h; sourceTree = "<group>"; };
+		DF4EB102175473D300633ED2 /* EFCellData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFCellData.m; sourceTree = "<group>"; };
+		DF4EB1081754745200633ED2 /* avatarPlaceHolder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatarPlaceHolder.png; sourceTree = "<group>"; };
+		DF4EB1091754745200633ED2 /* avatarPlaceHolder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatarPlaceHolder@2x.png"; sourceTree = "<group>"; };
 		DFF78D41174D38D3000A8962 /* MessageRepresentations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageRepresentations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFF78D45174D38D3000A8962 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DFF78D47174D38D3000A8962 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -132,7 +151,7 @@
 				DFF78D54174D38D3000A8962 /* EXPAppDelegate.h */,
 				DFF78D55174D38D3000A8962 /* EXPAppDelegate.m */,
 				DFF78D5D174D38D3000A8962 /* MainStoryboard.storyboard */,
-				DFF78DCA174F63BD000A8962 /* New Group */,
+				DFF78DCA174F63BD000A8962 /* EFMethod */,
 				DFF78D75174D3DD9000A8962 /* Controllers */,
 				DFF78D76174D3DE5000A8962 /* Model */,
 				DFF78D77174D3DF3000A8962 /* Views */,
@@ -149,6 +168,8 @@
 				DFF78D4E174D38D3000A8962 /* InfoPlist.strings */,
 				DFF78D51174D38D3000A8962 /* main.m */,
 				DFF78D53174D38D3000A8962 /* MessageRepresentations-Prefix.pch */,
+				DF4EB1081754745200633ED2 /* avatarPlaceHolder.png */,
+				DF4EB1091754745200633ED2 /* avatarPlaceHolder@2x.png */,
 				DFF78D57174D38D3000A8962 /* Default.png */,
 				DFF78D59174D38D3000A8962 /* Default@2x.png */,
 				DFF78D5B174D38D3000A8962 /* Default-568h@2x.png */,
@@ -264,11 +285,21 @@
 			name = "No Gradient Drawn";
 			sourceTree = "<group>";
 		};
-		DFF78DCA174F63BD000A8962 /* New Group */ = {
+		DFF78DCA174F63BD000A8962 /* EFMethod */ = {
 			isa = PBXGroup;
 			children = (
+				DF4EB0F9175473D300633ED2 /* ViewController.h */,
+				DF4EB0FA175473D300633ED2 /* ViewController.m */,
+				DF4EB0FB175473D300633ED2 /* EFTableViewCell.h */,
+				DF4EB0FC175473D300633ED2 /* EFTableViewCell.m */,
+				DF4EB0FD175473D300633ED2 /* EFCustomView.h */,
+				DF4EB0FE175473D300633ED2 /* EFCustomView.m */,
+				DF4EB0FF175473D300633ED2 /* EFTableViewController.h */,
+				DF4EB100175473D300633ED2 /* EFTableViewController.m */,
+				DF4EB101175473D300633ED2 /* EFCellData.h */,
+				DF4EB102175473D300633ED2 /* EFCellData.m */,
 			);
-			name = "New Group";
+			name = EFMethod;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,6 +362,8 @@
 				DFF78D7A174D3E1E000A8962 /* MessageFile.plist in Resources */,
 				DFF78D95174DF28F000A8962 /* chat-bubble-incoming@2x.png in Resources */,
 				DFF78D96174DF28F000A8962 /* chat-bubble-outgoing@2x.png in Resources */,
+				DF4EB10A1754745200633ED2 /* avatarPlaceHolder.png in Resources */,
+				DF4EB10B1754745200633ED2 /* avatarPlaceHolder@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +390,11 @@
 				DFF78DA5174E15C8000A8962 /* EXPSimpleReceiveView.m in Sources */,
 				DFF78DA9174E1768000A8962 /* pathMethods.m in Sources */,
 				DFF78DC8174F49D7000A8962 /* EXPCell.m in Sources */,
+				DF4EB103175473D300633ED2 /* ViewController.m in Sources */,
+				DF4EB104175473D300633ED2 /* EFTableViewCell.m in Sources */,
+				DF4EB105175473D300633ED2 /* EFCustomView.m in Sources */,
+				DF4EB106175473D300633ED2 /* EFTableViewController.m in Sources */,
+				DF4EB107175473D300633ED2 /* EFCellData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

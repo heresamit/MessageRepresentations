@@ -1,0 +1,53 @@
+//
+//  EFCellData.m
+//  ExtremelyFastMessageTable
+//
+//  Created by Amit Chowdhary on 27/05/13.
+//  Copyright (c) 2013 Amit Chowdhary. All rights reserved.
+//
+
+#import "EFCellData.h"
+
+
+@implementation EFCellData
+
+
+-(id) initWithText:(NSString *)text withType:(typeOfBubble)type withImage:(UIImage *)avatarImage
+{
+    
+    self = [super init];
+    if (self)
+    {
+        //calculate size for this amount of text
+        //calculate size and store in self.size
+        //alloc and create custom view depending on its type using size calculated above
+        
+    CGSize tempSize = [text sizeWithFont:[UIFont fontWithName:@"Helvetica Neue" size:15.0f] constrainedToSize:CGSizeMake(MAXTEXTWIDTH,INFINITY)  lineBreakMode:NSLineBreakByWordWrapping];// can font be reused?
+    
+    _sizeOfCell = [NSValue valueWithCGSize:tempSize];
+    _text = text;
+    _type = type;
+    _avatarImage = avatarImage;
+    CGFloat temp = tempSize.width + XBUBBLEBUFFER + XTEXTBUFFER + AVATARPICWIDTH + AVATARXBUFFER + triangleHeight;
+    
+    switch (type) {
+        case readSentWithAvatar:
+                 _customView = [[EFCustomView alloc] initWithFrame:CGRectMake( [[UIScreen mainScreen] bounds].size.width - temp, 0.0f,temp, MAX(tempSize.height + YTEXTBUFFER , AVATARPICHEIGHT) + YCELLBUFFER) withType:type withText:text withTextFrameSize:tempSize withImage:_avatarImage];
+            break;
+               
+        case receivedWithAvatar:
+           
+                 _customView = [[EFCustomView alloc] initWithFrame:CGRectMake(0.0f,0.0f,temp,MAX(tempSize.height + YTEXTBUFFER , AVATARPICHEIGHT) + YCELLBUFFER) withType:type withText:text withTextFrameSize:tempSize withImage:_avatarImage];
+            break;
+                
+        default:
+            break;
+        }
+   
+    _customView.backgroundColor = [UIColor clearColor];
+    
+    }
+    
+    return self;
+}
+@end

@@ -69,7 +69,7 @@
 {
 
     // Return the number of rows in the section.
-    NSLog(@"%d",[_dataObjectForBubbles rowsForBubbleTable:self]);
+    //NSLog(@"%d",[_dataObjectForBubbles rowsForBubbleTable:self]);
     return [_dataObjectForBubbles rowsForBubbleTable:self];
 }
 

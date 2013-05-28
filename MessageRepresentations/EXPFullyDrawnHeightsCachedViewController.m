@@ -51,18 +51,30 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     BOOL temp = [[self.messages.messageArray[indexPath.row] objectAtIndex:0] boolValue];
-    NSString *abc;
     if(temp)
-        abc = @"Host";
+    {
+        
+        EXPSentMessageView *cell = [tableView dequeueReusableCellWithIdentifier:HOST];
+ 
+        cell.size = [messages.heightArray objectAtIndex:indexPath.row];
+        cell.text = [[messages.messageArray objectAtIndex:indexPath.row] objectAtIndex:1];
+        cell.layer.shouldRasterize = YES;
+        [cell setNeedsDisplay];
+        return cell;
+        
+    }
     else
-        abc = @"Responder";
-    
-    EXPReceivedMessageView *cell = [tableView dequeueReusableCellWithIdentifier:abc];
-    cell.layer.shouldRasterize = YES;
-    cell.size = messages.heightArray[indexPath.row];
-    cell.text = messages.messageArray[indexPath.row][1];
-    [cell setNeedsDisplay];
-    return cell;
+    {
+        
+        EXPReceivedMessageView *cell = [tableView dequeueReusableCellWithIdentifier:RESPONDER];
+ 
+        cell.size = [messages.heightArray objectAtIndex:indexPath.row];
+        cell.text = [[messages.messageArray objectAtIndex:indexPath.row] objectAtIndex:1];
+        cell.layer.shouldRasterize = YES;
+        [cell setNeedsDisplay];
+        return cell;
+        
+    }
 }
 
 

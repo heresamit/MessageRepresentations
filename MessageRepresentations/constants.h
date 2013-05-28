@@ -26,3 +26,31 @@
 #define yBOTTOMBUBBLEBUFFER 2.0f
 
 #define CELLWIDTH [[UIScreen mainScreen] bounds].size.width
+
+#define MAXTEXTWIDTH 230.0f
+#define AVATARPICHEIGHT 30.0f
+#define AVATARPICWIDTH 30.0f
+#define AVATARXBUFFER 8.0f
+#define MAXTEXTHEIGHT 99999.0f
+
+#define YCELLBUFFER 12.0f
+#define YTEXTBUFFER 8.0f
+#define XTEXTBUFFER 15.0f
+#define XBUBBLEBUFFER 8.0f
+
+#define triangleHeight  9.5f
+#define triangleWidth  9.5f
+#define triangleTopBuffer 4.0f
+#define CORNERRADIUS 8.0f
+
+typedef enum{
+    receivedWithAvatar = 0,
+    receivedWithoutAvatar,
+    readSentWithAvatar,
+    readSentWithoutAvatar,
+    sendingWithAvatar,
+    sendingWithoutAvatar,
+    unreadSentWithAvatar,
+    unreadSentWithoutAvatar
+    //...
+}typeOfBubble;

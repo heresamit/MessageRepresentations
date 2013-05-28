@@ -10,8 +10,6 @@
 #import "constants.h"
 #import "pathMethods.h"
 @implementation EXPReceivedMessageView
-@synthesize text = _text;
-@synthesize size = _size;
 - (void)drawRect:(CGRect)rect {
     
         CGContextRef context = UIGraphicsGetCurrentContext();

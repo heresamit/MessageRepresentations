@@ -41,7 +41,7 @@
 //        }
         cell.size = [messages.heightArray objectAtIndex:indexPath.row];
         cell.text = [[messages.messageArray objectAtIndex:indexPath.row] objectAtIndex:1];
-                [cell setNeedsDisplay];
+        [cell setNeedsDisplay];
         cell.layer.shouldRasterize = YES;
 
         return cell;
