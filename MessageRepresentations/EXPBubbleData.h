@@ -21,9 +21,10 @@ typedef enum _NSBubbleType
 @property (readonly, nonatomic) NSBubbleType type;
 @property (readonly, nonatomic, strong) UIView *view;
 @property (readonly, nonatomic) UIEdgeInsets insets;
+@property (nonatomic, weak) UIImage *avatar;
 
-- (id)initWithText:(NSString *)text date:(NSDate *)date type:(NSBubbleType)type;
-+ (id)dataWithText:(NSString *)text date:(NSDate *)date type:(NSBubbleType)type;
+- (id)initWithText:(NSString *)text date:(NSDate *)date type:(NSBubbleType)type withAvatar:avatar;
++ (id)dataWithText:(NSString *)text date:(NSDate *)date type:(NSBubbleType)type withAvatar:(UIImage *)avatar;
 - (id)initWithImage:(UIImage *)image date:(NSDate *)date type:(NSBubbleType)type;
 + (id)dataWithImage:(UIImage *)image date:(NSDate *)date type:(NSBubbleType)type;
 - (id)initWithView:(UIView *)view date:(NSDate *)date type:(NSBubbleType)type insets:(UIEdgeInsets)insets;

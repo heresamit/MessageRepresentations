@@ -8,19 +8,26 @@
 
 #import "EXPSpecialViewController.h"
 #import "EXPSpecialTableView.h"
-
+#import "PerformanceMeasurer.h"
 @interface EXPSpecialViewController ()
-
+@property (nonatomic,strong) PerformanceMeasurer* pm;
 @property (nonatomic, strong) NSMutableArray *dataForBubbles;
+@property (nonatomic, strong) UIImage *avatar;
+
 @end
 
 @implementation EXPSpecialViewController
+
+-(void) updateNavBar:(int)toDisplay
+{
+    self.navigationItem.title = [NSString stringWithFormat:@"%d",toDisplay];
+}
 
 -(id) initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        _messages = [[EXPAppDataSource alloc] init];
+         //_pm = [[PerformanceMeasurer alloc] initWithObject:self];
         // Custom initialization
     }
     return self;
@@ -32,7 +39,7 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        _messages = [[EXPAppDataSource alloc] init];
+         //_pm = [[PerformanceMeasurer alloc] initWithObject:self];
         // Custom initialization
     }
     return self;
@@ -42,11 +49,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    _avatar = [UIImage imageNamed:@"avatarPlaceHolder"];
+    //UIImage *newImage = [image _imageScaledToSize:CGSizeMake(290, 390)                             interpolationQuality:1];
     _dataForBubbles = [[NSMutableArray alloc] init];
     for(id obj in _messages.messageArray)
     {
-        [_dataForBubbles addObject:[EXPBubbleData dataWithText:[obj objectAtIndex:1] date:[NSDate dateWithTimeIntervalSinceNow:0] type:!([[obj objectAtIndex:0] boolValue])]];
+        [_dataForBubbles addObject:[EXPBubbleData dataWithText:[obj objectAtIndex:1] date:[NSDate dateWithTimeIntervalSinceNow:0] type:!([[obj objectAtIndex:0] boolValue]) withAvatar:_avatar]];
         
     }
     self.bubbleTableView.dataObjectForBubbles = self;

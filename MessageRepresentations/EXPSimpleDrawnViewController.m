@@ -9,21 +9,26 @@
 #import "EXPSimpleDrawnViewController.h"
 #import "EXPSimpleReceiveView.h"
 #import "EXPSimpleSendView.h"
+#import "PerformanceMeasurer.h"
 #import "constants.h"
 #define HOST @"Host"
 #define RESPONDER @"Responder"
 
 @interface EXPSimpleDrawnViewController ()
-
+@property (nonatomic,strong) PerformanceMeasurer* pm;
 @end
 
 @implementation EXPSimpleDrawnViewController
-
+-(void) updateNavBar:(int)toDisplay
+{
+    self.navigationItem.title = [NSString stringWithFormat:@"%d",toDisplay];
+}
 
 -(id) initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
+         _pm = [[PerformanceMeasurer alloc] initWithObject:self];
         _messages = [[EXPAppDataSource alloc] init];
         // Custom initialization
     }
@@ -36,6 +41,7 @@
 {
     self = [super initWithStyle:style];
     if (self) {
+         _pm = [[PerformanceMeasurer alloc] initWithObject:self];
         _messages = [[EXPAppDataSource alloc] init];
         // Custom initialization
     }

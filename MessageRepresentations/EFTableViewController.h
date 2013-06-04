@@ -10,4 +10,5 @@
 
 @interface EFTableViewController : UITableViewController
 @property (nonatomic,strong) NSMutableArray *dataArray;
+-(void) updateNavBar:(int)toDisplay;
 @end

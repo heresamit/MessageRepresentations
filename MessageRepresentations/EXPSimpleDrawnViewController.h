@@ -12,4 +12,5 @@
 
 @interface EXPSimpleDrawnViewController : UITableViewController
 @property (nonatomic,strong) EXPAppDataSource *messages;
+-(void) updateNavBar:(int)toDisplay;
 @end

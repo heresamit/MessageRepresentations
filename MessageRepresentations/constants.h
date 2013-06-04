@@ -51,6 +51,9 @@ typedef enum{
     sendingWithAvatar,
     sendingWithoutAvatar,
     unreadSentWithAvatar,
-    unreadSentWithoutAvatar
+    unreadSentWithoutAvatar,
+    
+    selectedReadSentWithAvatar,
+    selectedReceivedWithAvatar
     //...
 }typeOfBubble;

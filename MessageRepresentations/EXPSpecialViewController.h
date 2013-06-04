@@ -16,7 +16,7 @@
 @property (strong, nonatomic) IBOutlet EXPSpecialTableView *bubbleTableView;
 
 @property (nonatomic, strong) EXPAppDataSource *messages;
-
+-(void) updateNavBar:(int)toDisplay;
 - (NSInteger)rowsForBubbleTable:(EXPSpecialTableView *)tableView;
 - (EXPBubbleData *)bubbleTableView:(EXPSpecialTableView *)tableView dataForRow:(NSInteger)row;
 

@@ -7,6 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF011ECB1757153D00357479 /* EmojiList.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF011EC81757153D00357479 /* EmojiList.plist */; };
+		DF011ECC1757153D00357479 /* PBEmojiLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = DF011ECA1757153D00357479 /* PBEmojiLabel.m */; };
+		DF011ECF17571A6000357479 /* EXPMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF011ECE17571A6000357479 /* EXPMenuTableViewController.m */; };
+		DF011ED517574BA900357479 /* sizeOfTextFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = DF011ED417574BA900357479 /* sizeOfTextFrame.m */; };
+		DF0153C41758742A00109927 /* EXPInsaneLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0153C31758742A00109927 /* EXPInsaneLabel.m */; };
+		DF0153C71758822300109927 /* happyEmoticon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF0153C51758822300109927 /* happyEmoticon@2x.png */; };
+		DF0153C81758822300109927 /* sadEmoticon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF0153C61758822300109927 /* sadEmoticon@2x.png */; };
+		DF0153CB17588D6700109927 /* happyEmoticon.png in Resources */ = {isa = PBXBuildFile; fileRef = DF0153C917588D6700109927 /* happyEmoticon.png */; };
+		DF0153CC17588D6700109927 /* sadEmoticon.png in Resources */ = {isa = PBXBuildFile; fileRef = DF0153CA17588D6700109927 /* sadEmoticon.png */; };
+		DF0975D81754A6E800126D1D /* EXPLayerMethodCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0975D71754A6E800126D1D /* EXPLayerMethodCustomView.m */; };
+		DF0975DA1754AC7700126D1D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0975D91754AC7700126D1D /* QuartzCore.framework */; };
+		DF0975DD1754AD9000126D1D /* CALayerMethodCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0975DC1754AD9000126D1D /* CALayerMethodCellData.m */; };
+		DF0975E01754AFD800126D1D /* EXPLayerMethodTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0975DF1754AFD800126D1D /* EXPLayerMethodTableViewController.m */; };
+		DF0975E31754B27600126D1D /* EXPLayerTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0975E21754B27500126D1D /* EXPLayerTypeCell.m */; };
+		DF10EA4F175C564B004BAE2D /* EXPLayerCustomEmoticons.m in Sources */ = {isa = PBXBuildFile; fileRef = DF10EA4E175C564B004BAE2D /* EXPLayerCustomEmoticons.m */; };
+		DF10EA52175C57EA004BAE2D /* CustomEmoticonsCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = DF10EA51175C57EA004BAE2D /* CustomEmoticonsCellData.m */; };
+		DF10EA55175C5E62004BAE2D /* EXPInsaneLabelCustomEmoticonsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF10EA54175C5E62004BAE2D /* EXPInsaneLabelCustomEmoticonsViewController.m */; };
+		DF29EFFC1754CE1B00B328C4 /* PerformanceMeasurer.m in Sources */ = {isa = PBXBuildFile; fileRef = DF29EFFB1754CE1A00B328C4 /* PerformanceMeasurer.m */; };
+		DF32642117578839000D8D4D /* EXPerimentalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF32642017578839000D8D4D /* EXPerimentalViewController.m */; };
 		DF4EB103175473D300633ED2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4EB0FA175473D300633ED2 /* ViewController.m */; };
 		DF4EB104175473D300633ED2 /* EFTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4EB0FC175473D300633ED2 /* EFTableViewCell.m */; };
 		DF4EB105175473D300633ED2 /* EFCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4EB0FE175473D300633ED2 /* EFCustomView.m */; };
@@ -45,6 +64,39 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF011EC81757153D00357479 /* EmojiList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = EmojiList.plist; path = "../../../Downloads/PBEmojiLabel-master/Classes/EmojiList.plist"; sourceTree = "<group>"; };
+		DF011EC91757153D00357479 /* PBEmojiLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PBEmojiLabel.h; path = "../../../Downloads/PBEmojiLabel-master/Classes/PBEmojiLabel.h"; sourceTree = "<group>"; };
+		DF011ECA1757153D00357479 /* PBEmojiLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PBEmojiLabel.m; path = "../../../Downloads/PBEmojiLabel-master/Classes/PBEmojiLabel.m"; sourceTree = "<group>"; };
+		DF011ECD17571A6000357479 /* EXPMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPMenuTableViewController.h; sourceTree = "<group>"; };
+		DF011ECE17571A6000357479 /* EXPMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPMenuTableViewController.m; sourceTree = "<group>"; };
+		DF011ED017573FDC00357479 /* calculateSize.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = calculateSize.c; sourceTree = "<group>"; };
+		DF011ED317574BA900357479 /* sizeOfTextFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sizeOfTextFrame.h; sourceTree = "<group>"; };
+		DF011ED417574BA900357479 /* sizeOfTextFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sizeOfTextFrame.m; sourceTree = "<group>"; };
+		DF0153C21758742A00109927 /* EXPInsaneLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPInsaneLabel.h; sourceTree = "<group>"; };
+		DF0153C31758742A00109927 /* EXPInsaneLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPInsaneLabel.m; sourceTree = "<group>"; };
+		DF0153C51758822300109927 /* happyEmoticon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "happyEmoticon@2x.png"; sourceTree = "<group>"; };
+		DF0153C61758822300109927 /* sadEmoticon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sadEmoticon@2x.png"; sourceTree = "<group>"; };
+		DF0153C917588D6700109927 /* happyEmoticon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = happyEmoticon.png; sourceTree = "<group>"; };
+		DF0153CA17588D6700109927 /* sadEmoticon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sadEmoticon.png; sourceTree = "<group>"; };
+		DF0975D61754A6E800126D1D /* EXPLayerMethodCustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPLayerMethodCustomView.h; sourceTree = "<group>"; };
+		DF0975D71754A6E800126D1D /* EXPLayerMethodCustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPLayerMethodCustomView.m; sourceTree = "<group>"; };
+		DF0975D91754AC7700126D1D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DF0975DB1754AD9000126D1D /* CALayerMethodCellData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CALayerMethodCellData.h; sourceTree = "<group>"; };
+		DF0975DC1754AD9000126D1D /* CALayerMethodCellData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CALayerMethodCellData.m; sourceTree = "<group>"; };
+		DF0975DE1754AFD700126D1D /* EXPLayerMethodTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPLayerMethodTableViewController.h; sourceTree = "<group>"; };
+		DF0975DF1754AFD800126D1D /* EXPLayerMethodTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPLayerMethodTableViewController.m; sourceTree = "<group>"; };
+		DF0975E11754B27500126D1D /* EXPLayerTypeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPLayerTypeCell.h; sourceTree = "<group>"; };
+		DF0975E21754B27500126D1D /* EXPLayerTypeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPLayerTypeCell.m; sourceTree = "<group>"; };
+		DF10EA4D175C564B004BAE2D /* EXPLayerCustomEmoticons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPLayerCustomEmoticons.h; sourceTree = "<group>"; };
+		DF10EA4E175C564B004BAE2D /* EXPLayerCustomEmoticons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPLayerCustomEmoticons.m; sourceTree = "<group>"; };
+		DF10EA50175C57EA004BAE2D /* CustomEmoticonsCellData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomEmoticonsCellData.h; sourceTree = "<group>"; };
+		DF10EA51175C57EA004BAE2D /* CustomEmoticonsCellData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomEmoticonsCellData.m; sourceTree = "<group>"; };
+		DF10EA53175C5E62004BAE2D /* EXPInsaneLabelCustomEmoticonsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPInsaneLabelCustomEmoticonsViewController.h; sourceTree = "<group>"; };
+		DF10EA54175C5E62004BAE2D /* EXPInsaneLabelCustomEmoticonsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPInsaneLabelCustomEmoticonsViewController.m; sourceTree = "<group>"; };
+		DF29EFFA1754CE1A00B328C4 /* PerformanceMeasurer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerformanceMeasurer.h; sourceTree = "<group>"; };
+		DF29EFFB1754CE1A00B328C4 /* PerformanceMeasurer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerformanceMeasurer.m; sourceTree = "<group>"; };
+		DF32641F17578839000D8D4D /* EXPerimentalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPerimentalViewController.h; sourceTree = "<group>"; };
+		DF32642017578839000D8D4D /* EXPerimentalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPerimentalViewController.m; sourceTree = "<group>"; };
 		DF4EB0F9175473D300633ED2 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		DF4EB0FA175473D300633ED2 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DF4EB0FB175473D300633ED2 /* EFTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFTableViewCell.h; sourceTree = "<group>"; };
@@ -112,6 +164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF0975DA1754AC7700126D1D /* QuartzCore.framework in Frameworks */,
 				DFF78D46174D38D3000A8962 /* UIKit.framework in Frameworks */,
 				DFF78D48174D38D3000A8962 /* Foundation.framework in Frameworks */,
 				DFF78D4A174D38D3000A8962 /* CoreGraphics.framework in Frameworks */,
@@ -121,9 +174,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF011EC61757150B00357479 /* Emoticon Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DF011EC71757151600357479 /* Method 1, Emoji */,
+			);
+			name = "Emoticon Support Files";
+			sourceTree = "<group>";
+		};
+		DF011EC71757151600357479 /* Method 1, Emoji */ = {
+			isa = PBXGroup;
+			children = (
+				DF011EC81757153D00357479 /* EmojiList.plist */,
+				DF011EC91757153D00357479 /* PBEmojiLabel.h */,
+				DF011ECA1757153D00357479 /* PBEmojiLabel.m */,
+				DF011ED017573FDC00357479 /* calculateSize.c */,
+			);
+			name = "Method 1, Emoji";
+			sourceTree = "<group>";
+		};
 		DFF78D36174D38D3000A8962 = {
 			isa = PBXGroup;
 			children = (
+				DF011ED317574BA900357479 /* sizeOfTextFrame.h */,
+				DF011ED417574BA900357479 /* sizeOfTextFrame.m */,
+				DF0153C21758742A00109927 /* EXPInsaneLabel.h */,
+				DF0153C31758742A00109927 /* EXPInsaneLabel.m */,
+				DF32641F17578839000D8D4D /* EXPerimentalViewController.h */,
+				DF32642017578839000D8D4D /* EXPerimentalViewController.m */,
+				DF011EC61757150B00357479 /* Emoticon Support Files */,
+				DF0975D91754AC7700126D1D /* QuartzCore.framework */,
 				DFF78D4B174D38D3000A8962 /* MessageRepresentations */,
 				DFF78D44174D38D3000A8962 /* Frameworks */,
 				DFF78D42174D38D3000A8962 /* Products */,
@@ -174,7 +254,11 @@
 				DF4EB1081754745200633ED2 /* avatarPlaceHolder.png */,
 				DF4EB1091754745200633ED2 /* avatarPlaceHolder@2x.png */,
 				DFF78D57174D38D3000A8962 /* Default.png */,
+				DF0153C917588D6700109927 /* happyEmoticon.png */,
+				DF0153CA17588D6700109927 /* sadEmoticon.png */,
 				DFF78D59174D38D3000A8962 /* Default@2x.png */,
+				DF0153C51758822300109927 /* happyEmoticon@2x.png */,
+				DF0153C61758822300109927 /* sadEmoticon@2x.png */,
 				DFF78D5B174D38D3000A8962 /* Default-568h@2x.png */,
 				DFF78D93174DF28F000A8962 /* chat-bubble-incoming@2x.png */,
 				DFF78D94174DF28F000A8962 /* chat-bubble-outgoing@2x.png */,
@@ -295,14 +379,32 @@
 				DF4EB0FA175473D300633ED2 /* ViewController.m */,
 				DF4EB0FB175473D300633ED2 /* EFTableViewCell.h */,
 				DF4EB0FC175473D300633ED2 /* EFTableViewCell.m */,
+				DF0975E11754B27500126D1D /* EXPLayerTypeCell.h */,
+				DF0975E21754B27500126D1D /* EXPLayerTypeCell.m */,
 				DF4EB0FD175473D300633ED2 /* EFCustomView.h */,
 				DF4EB0FE175473D300633ED2 /* EFCustomView.m */,
+				DF0975D61754A6E800126D1D /* EXPLayerMethodCustomView.h */,
+				DF0975D71754A6E800126D1D /* EXPLayerMethodCustomView.m */,
+				DF0975DE1754AFD700126D1D /* EXPLayerMethodTableViewController.h */,
+				DF0975DF1754AFD800126D1D /* EXPLayerMethodTableViewController.m */,
 				DF4EB0FF175473D300633ED2 /* EFTableViewController.h */,
 				DF4EB100175473D300633ED2 /* EFTableViewController.m */,
+				DF0975DB1754AD9000126D1D /* CALayerMethodCellData.h */,
+				DF0975DC1754AD9000126D1D /* CALayerMethodCellData.m */,
 				DF4EB101175473D300633ED2 /* EFCellData.h */,
 				DF4EB102175473D300633ED2 /* EFCellData.m */,
 				DF4EB10F175483C400633ED2 /* EXPLazyDrawnCachedTableViewController.h */,
 				DF4EB110175483C400633ED2 /* EXPLazyDrawnCachedTableViewController.m */,
+				DF29EFFA1754CE1A00B328C4 /* PerformanceMeasurer.h */,
+				DF29EFFB1754CE1A00B328C4 /* PerformanceMeasurer.m */,
+				DF011ECD17571A6000357479 /* EXPMenuTableViewController.h */,
+				DF011ECE17571A6000357479 /* EXPMenuTableViewController.m */,
+				DF10EA4D175C564B004BAE2D /* EXPLayerCustomEmoticons.h */,
+				DF10EA4E175C564B004BAE2D /* EXPLayerCustomEmoticons.m */,
+				DF10EA50175C57EA004BAE2D /* CustomEmoticonsCellData.h */,
+				DF10EA51175C57EA004BAE2D /* CustomEmoticonsCellData.m */,
+				DF10EA53175C5E62004BAE2D /* EXPInsaneLabelCustomEmoticonsViewController.h */,
+				DF10EA54175C5E62004BAE2D /* EXPInsaneLabelCustomEmoticonsViewController.m */,
 			);
 			name = EFMethod;
 			sourceTree = "<group>";
@@ -369,6 +471,11 @@
 				DFF78D96174DF28F000A8962 /* chat-bubble-outgoing@2x.png in Resources */,
 				DF4EB10A1754745200633ED2 /* avatarPlaceHolder.png in Resources */,
 				DF4EB10B1754745200633ED2 /* avatarPlaceHolder@2x.png in Resources */,
+				DF011ECB1757153D00357479 /* EmojiList.plist in Resources */,
+				DF0153C71758822300109927 /* happyEmoticon@2x.png in Resources */,
+				DF0153C81758822300109927 /* sadEmoticon@2x.png in Resources */,
+				DF0153CB17588D6700109927 /* happyEmoticon.png in Resources */,
+				DF0153CC17588D6700109927 /* sadEmoticon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +508,19 @@
 				DF4EB106175473D300633ED2 /* EFTableViewController.m in Sources */,
 				DF4EB107175473D300633ED2 /* EFCellData.m in Sources */,
 				DF4EB111175483C400633ED2 /* EXPLazyDrawnCachedTableViewController.m in Sources */,
+				DF0975D81754A6E800126D1D /* EXPLayerMethodCustomView.m in Sources */,
+				DF0975DD1754AD9000126D1D /* CALayerMethodCellData.m in Sources */,
+				DF0975E01754AFD800126D1D /* EXPLayerMethodTableViewController.m in Sources */,
+				DF0975E31754B27600126D1D /* EXPLayerTypeCell.m in Sources */,
+				DF29EFFC1754CE1B00B328C4 /* PerformanceMeasurer.m in Sources */,
+				DF011ECC1757153D00357479 /* PBEmojiLabel.m in Sources */,
+				DF011ECF17571A6000357479 /* EXPMenuTableViewController.m in Sources */,
+				DF011ED517574BA900357479 /* sizeOfTextFrame.m in Sources */,
+				DF32642117578839000D8D4D /* EXPerimentalViewController.m in Sources */,
+				DF0153C41758742A00109927 /* EXPInsaneLabel.m in Sources */,
+				DF10EA4F175C564B004BAE2D /* EXPLayerCustomEmoticons.m in Sources */,
+				DF10EA52175C57EA004BAE2D /* CustomEmoticonsCellData.m in Sources */,
+				DF10EA55175C5E62004BAE2D /* EXPInsaneLabelCustomEmoticonsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

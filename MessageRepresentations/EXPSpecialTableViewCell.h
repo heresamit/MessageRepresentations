@@ -11,4 +11,5 @@
 
 @interface EXPSpecialTableViewCell : UITableViewCell
 @property (nonatomic, strong) EXPBubbleData *data;
+@property (nonatomic) BOOL showAvatar;
 @end

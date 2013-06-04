@@ -11,20 +11,28 @@
 #import "EXPSentMessageView.h"
 #import "EXPReceivedMessageView.h"
 #import "constants.h"
+#import "PerformanceMeasurer.h"
 #import  <QuartzCore/QuartzCore.h>
 #define HOST @"Host"
 #define RESPONDER @"Responder"
 
-@interface EXPFullyDrawnHeightsCachedViewController ()
 
+@interface EXPFullyDrawnHeightsCachedViewController ()
+@property (nonatomic,strong) PerformanceMeasurer* pm;
 @end
 
 @implementation EXPFullyDrawnHeightsCachedViewController
+
+-(void) updateNavBar:(int)toDisplay
+{
+    self.navigationItem.title = [NSString stringWithFormat:@"%d",toDisplay];
+}
 
 -(id) initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
+         _pm = [[PerformanceMeasurer alloc] initWithObject:self];
         _messages = [[EXPAppDataSource alloc] init];
         // Custom initialization
     }
@@ -37,6 +45,7 @@
 {
     self = [super initWithStyle:style];
     if (self) {
+         _pm = [[PerformanceMeasurer alloc] initWithObject:self];
        _messages = [[EXPAppDataSource alloc] init];
         // Custom initialization
     }

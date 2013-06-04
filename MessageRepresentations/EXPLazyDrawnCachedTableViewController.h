@@ -10,4 +10,7 @@
 
 @interface EXPLazyDrawnCachedTableViewController : UITableViewController
 @property (nonatomic,strong) NSMutableDictionary *dataDictionary;
+@property (nonatomic,strong) NSMutableArray *tempArray;
+-(void) updateNavBar:(int)toDisplay;
+-(void) parseData;
 @end

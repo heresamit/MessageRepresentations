@@ -10,16 +10,21 @@
 #import "EFTableViewCell.h"
 #import "EFCellData.h"
 #import "Constants.h"
+#import "PerformanceMeasurer.h"
 
 @interface EFTableViewController ()
-
+@property (nonatomic,strong) PerformanceMeasurer* pm;
 @end
 
 @implementation EFTableViewController
-
+-(void) updateNavBar:(int)toDisplay
+{
+    self.navigationItem.title = [NSString stringWithFormat:@"%d",toDisplay];
+}
 
 - (void)parseData
 {
+     _pm = [[PerformanceMeasurer alloc] initWithObject:self];
     _dataArray = [[NSMutableArray alloc] init];
     NSString *path = [[NSBundle mainBundle] pathForResource:@"MessageFile" ofType:@"plist"];
     NSMutableArray *tempArray = [[NSMutableArray alloc] initWithContentsOfFile:path];

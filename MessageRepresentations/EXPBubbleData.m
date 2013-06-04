@@ -10,28 +10,21 @@
 
 @implementation EXPBubbleData
 
-#pragma mark - Properties
-
-@synthesize date = _date;
-@synthesize type = _type;
-@synthesize view = _view;
-@synthesize insets = _insets;
 
 #pragma mark - Text bubble
 
 const UIEdgeInsets textInsetsMine = {5, 10, 11, 17};
 const UIEdgeInsets textInsetsSomeone = {5, 15, 11, 10};
 
-+ (id)dataWithText:(NSString *)text date:(NSDate *)date type:(NSBubbleType)type
++ (id)dataWithText:(NSString *)text date:(NSDate *)date type:(NSBubbleType)type withAvatar:(UIImage *)avatar
 {
-    return [[EXPBubbleData alloc] initWithText:text date:date type:type];
+    return [[EXPBubbleData alloc] initWithText:text date:date type:type withAvatar:avatar];
 }
 
-- (id)initWithText:(NSString *)text date:(NSDate *)date type:(NSBubbleType)type
+- (id)initWithText:(NSString *)text date:(NSDate *)date type:(NSBubbleType)type withAvatar:avatar
 {
     UIFont *font = [UIFont systemFontOfSize:[UIFont systemFontSize]];
     CGSize size = [(text ? text : @"") sizeWithFont:font constrainedToSize:CGSizeMake(220, 9999) lineBreakMode:NSLineBreakByWordWrapping];
-    
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height)];
     label.numberOfLines = 0;
     label.lineBreakMode = NSLineBreakByWordWrapping;
@@ -39,6 +32,7 @@ const UIEdgeInsets textInsetsSomeone = {5, 15, 11, 10};
     label.font = font;
     label.backgroundColor = [UIColor clearColor];
     UIEdgeInsets insets = (type == BubbleTypeMine ? textInsetsMine : textInsetsSomeone);
+    self.avatar = avatar;
     return [self initWithView:label date:date type:type insets:insets];
 }
 

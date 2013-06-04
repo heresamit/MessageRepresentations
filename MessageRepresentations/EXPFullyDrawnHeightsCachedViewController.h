@@ -10,4 +10,5 @@
 #import "EXPAppDataSource.h"
 @interface EXPFullyDrawnHeightsCachedViewController : UITableViewController
 @property (nonatomic,strong) EXPAppDataSource *messages;
+-(void) updateNavBar:(int)toDisplay;
 @end
