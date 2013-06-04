@@ -22,4 +22,5 @@
 -(id) initWithText:(NSString *)text withType:(typeOfBubble)type withImage:(UIImage *)avatarImage;
 -(id) initWithTextWithoutViewCreation:(NSString *)text withType:(typeOfBubble)type withImage:(UIImage *)avatarImage;
 -(void) drawView;
+- (EFCustomView *) getView;
 @end

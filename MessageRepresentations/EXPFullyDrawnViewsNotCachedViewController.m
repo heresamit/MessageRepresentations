@@ -1,25 +1,24 @@
 //
-//  EXPLazyDrawnCachedTableViewController.m
+//  EXPFullyDrawnViewsNotCachedViewController.m
 //  MessageRepresentations
 //
-//  Created by Amit Chowdhary on 28/05/13.
+//  Created by Amit Chowdhary on 04/06/13.
 //  Copyright (c) 2013 Amit Chowdhary. All rights reserved.
 //
 
-#import "EXPLazyDrawnCachedTableViewController.h"
+#import "EXPFullyDrawnViewsNotCachedViewController.h"
 #import "EFCellData.h"
 #import "constants.h"
-#import "EFTableViewCell.h"
 #import "PerformanceMeasurer.h"
-
-@interface EXPLazyDrawnCachedTableViewController ()
+@interface EXPFullyDrawnViewsNotCachedViewController ()
 
 @property (nonatomic,strong) UIImage *avatarImage1;
 @property (nonatomic,strong) UIImage *avatarImage2;
 @property (nonatomic,strong) PerformanceMeasurer* pm;
+
 @end
 
-@implementation EXPLazyDrawnCachedTableViewController
+@implementation EXPFullyDrawnViewsNotCachedViewController
 
 -(void) updateNavBar:(int)toDisplay
 {
@@ -38,10 +37,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
- 
+    
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
@@ -70,19 +69,18 @@
     NSNumber *tempNumber = [NSNumber numberWithInteger:indexPath.row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EFCell"];
     EFCellData *data = [_dataDictionary objectForKey:tempNumber];
+    EFCustomView *view = [data getView];
     
-    if(!data.viewHasBeenCreated)
-        [data drawView];
-    
-    for(UIView *view in cell.contentView.subviews)
-        [view removeFromSuperview];
+    for(UIView *view1 in cell.contentView.subviews){
+        [view1 removeFromSuperview];
+    }
     
     if(self.interfaceOrientation != UIInterfaceOrientationPortrait && data.type == readSentWithAvatar)
         [data.customView shiftFrameForLandScape];
     else if(data.type == readSentWithAvatar)
         [data.customView shiftFrameForPortrait];
     
-    [cell.contentView addSubview: data.customView];
+    [cell.contentView addSubview:view];
     // Configure the cell...
     
     return cell;
@@ -115,43 +113,43 @@
 
 
 /*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+ // Override to support conditional editing of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the specified item to be editable.
+ return YES;
+ }
+ */
 
 /*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
+ // Override to support editing the table view.
+ - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ if (editingStyle == UITableViewCellEditingStyleDelete) {
+ // Delete the row from the data source
+ [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+ }
+ else if (editingStyle == UITableViewCellEditingStyleInsert) {
+ // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+ }
+ }
+ */
 
 /*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+ {
+ }
+ */
 
 /*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */
 
 #pragma mark - Table view delegate
 
@@ -169,7 +167,7 @@
     EFCellData *data = [_dataDictionary objectForKey:tempNumber];
     switch (data.customView.type) {
         case readSentWithAvatar:
-             data.customView.type = selectedReadSentWithAvatar;
+            data.customView.type = selectedReadSentWithAvatar;
             break;
         case receivedWithAvatar:
             data.customView.type = selectedReceivedWithAvatar;
@@ -184,9 +182,9 @@
         default:
             break;
             
-    
+            
     }
-     
+    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -209,7 +207,7 @@
         data = [_dataDictionary objectForKey:tempNumber];
     
     return MAX(AVATARPICHEIGHT,[[data sizeOfCell] CGSizeValue].height + YCELLBUFFER + YTEXTBUFFER);
-   
+    
 }
 
 @end

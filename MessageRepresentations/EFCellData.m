@@ -71,24 +71,30 @@
     return self;
 }
 
--(void) drawView
-{
+- (EFCustomView *) getView{
+    
     CGSize tempSize = [_sizeOfCell CGSizeValue];
     CGFloat temp = tempSize.width + XBUBBLEBUFFER + XTEXTBUFFER + AVATARPICWIDTH + AVATARXBUFFER + triangleHeight;
-    
-    switch (_type) {
+    EFCustomView *view;
+    switch (_type)
+    {
         case readSentWithAvatar:
-            _customView = [[EFCustomView alloc] initWithFrame:CGRectMake( [[UIScreen mainScreen] bounds].size.width - temp, 0.0f,temp, MAX(tempSize.height + YTEXTBUFFER , AVATARPICHEIGHT) + YCELLBUFFER) withType:_type withText:_text withTextFrameSize:tempSize withImage:_avatarImage];
+            view = [[EFCustomView alloc] initWithFrame:CGRectMake( [[UIScreen mainScreen] bounds].size.width - temp, 0.0f,temp, MAX(tempSize.height + YTEXTBUFFER , AVATARPICHEIGHT) + YCELLBUFFER) withType:_type withText:_text withTextFrameSize:tempSize withImage:_avatarImage];
             break;
-            
         case receivedWithAvatar:
             
-            _customView = [[EFCustomView alloc] initWithFrame:CGRectMake(0.0f,0.0f,temp,MAX(tempSize.height + YTEXTBUFFER , AVATARPICHEIGHT) + YCELLBUFFER) withType:_type withText:_text withTextFrameSize:tempSize withImage:_avatarImage];
+            view = [[EFCustomView alloc] initWithFrame:CGRectMake(0.0f,0.0f,temp,MAX(tempSize.height + YTEXTBUFFER , AVATARPICHEIGHT) + YCELLBUFFER) withType:_type withText:_text withTextFrameSize:tempSize withImage:_avatarImage];
             break;
-            
         default:
-            break;
+            return (EFCustomView *)[NSNull null];
     }
+    view.backgroundColor = [UIColor clearColor];
+    return view;
+}
+
+-(void) drawView
+{
+    self.customView = [self getView];
     _viewHasBeenCreated = YES;
     _customView.backgroundColor = [UIColor clearColor];
 }

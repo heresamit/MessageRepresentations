@@ -113,6 +113,19 @@
     return text;
 }
 
+//- (NSString *) quickParser: (NSString *) text
+//{
+//    unichar c;
+//    NSMutableString *temp = [text mutableCopy];
+//    
+//    for(NSUInteger a = 0; a < temp.length; a++)
+//    {
+//        c = [temp ]
+//        c = [temp characterAtIndex:a];
+//        
+//    }
+//    return [NSString stringWithString:temp];
+//}
 - (CGSize) sizeOfViewForText:(NSString *)text
 {
    [self resetVariables];

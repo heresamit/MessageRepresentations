@@ -14,6 +14,7 @@
 
 @interface EFTableViewController ()
 @property (nonatomic,strong) PerformanceMeasurer* pm;
+@property (nonatomic,strong) NSMutableArray* dataArray;
 @end
 
 @implementation EFTableViewController
@@ -24,13 +25,11 @@
 
 - (void)parseData
 {
+    _dataArray = [[NSMutableArray alloc] initWithCapacity:self.tempArray.count];
      _pm = [[PerformanceMeasurer alloc] initWithObject:self];
-    _dataArray = [[NSMutableArray alloc] init];
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"MessageFile" ofType:@"plist"];
-    NSMutableArray *tempArray = [[NSMutableArray alloc] initWithContentsOfFile:path];
     UIImage *avatarImage1 = [UIImage imageNamed:@"avatarPlaceHolder.png"];
     UIImage *avatarImage2 = [UIImage imageNamed:@"avatarPlaceHolder.png"];
-    for(NSArray *obj in tempArray)
+    for(NSArray *obj in self.tempArray)
     {
         if([obj[0] boolValue])
         {
@@ -43,27 +42,6 @@
         
     }
     //NSLog(@"%@",dataArray);
-}
--(id) initWithCoder:(NSCoder *)aDecoder
-{
-    self = [super initWithCoder:aDecoder];
-    if (self) {
-        [self parseData];
-        // Custom initialization
-    }
-    return self;
-
-    
-}
-
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        [self parseData];
-        // Custom initialization
-    }
-    return self;
 }
 
 - (void)viewDidLoad
@@ -102,16 +80,19 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"EFCell";
-    EFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     // Configure the cell...
     EFCellData *data = _dataArray[indexPath.row];
-
+    
+    for(UIView *view in cell.contentView.subviews)
+        [view removeFromSuperview];
+    
     if(self.interfaceOrientation != UIInterfaceOrientationPortrait && data.type == readSentWithAvatar)
         [data.customView shiftFrameForLandScape];
     else if(data.type == readSentWithAvatar)
         [data.customView shiftFrameForPortrait];
        
-    cell.data = data;
+    [cell.contentView addSubview:data.customView];
        
     return cell;
 }

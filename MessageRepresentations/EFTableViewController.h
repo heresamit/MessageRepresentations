@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface EFTableViewController : UITableViewController
-@property (nonatomic,strong) NSMutableArray *dataArray;
--(void) updateNavBar:(int)toDisplay;
+@property (nonatomic,weak) NSMutableArray *tempArray;
+- (void) updateNavBar:(int)toDisplay;
+- (void)parseData;
 @end

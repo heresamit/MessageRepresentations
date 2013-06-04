@@ -27,7 +27,7 @@
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-         //_pm = [[PerformanceMeasurer alloc] initWithObject:self];
+         _pm = [[PerformanceMeasurer alloc] initWithObject:self];
         // Custom initialization
     }
     return self;
@@ -39,7 +39,7 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-         //_pm = [[PerformanceMeasurer alloc] initWithObject:self];
+         _pm = [[PerformanceMeasurer alloc] initWithObject:self];
         // Custom initialization
     }
     return self;

@@ -30,7 +30,7 @@
 }
 - (void)parseData
 {
-    //_pm = [[PerformanceMeasurer alloc] initWithObject:self];
+    _pm = [[PerformanceMeasurer alloc] initWithObject:self];
     _dataDictionary = [[NSMutableDictionary alloc] init];
     _avatarImage1 = [UIImage imageNamed:@"avatarPlaceHolder.png"];
     _avatarImage2 = [UIImage imageNamed:@"avatarPlaceHolder.png"];
