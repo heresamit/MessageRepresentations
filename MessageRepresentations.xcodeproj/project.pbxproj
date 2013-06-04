@@ -19,17 +19,15 @@
 		DF0975DA1754AC7700126D1D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0975D91754AC7700126D1D /* QuartzCore.framework */; };
 		DF0975DD1754AD9000126D1D /* CALayerMethodCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0975DC1754AD9000126D1D /* CALayerMethodCellData.m */; };
 		DF0975E01754AFD800126D1D /* EXPLayerMethodTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0975DF1754AFD800126D1D /* EXPLayerMethodTableViewController.m */; };
-		DF0975E31754B27600126D1D /* EXPLayerTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF0975E21754B27500126D1D /* EXPLayerTypeCell.m */; };
 		DF10EA4F175C564B004BAE2D /* EXPLayerCustomEmoticons.m in Sources */ = {isa = PBXBuildFile; fileRef = DF10EA4E175C564B004BAE2D /* EXPLayerCustomEmoticons.m */; };
 		DF10EA52175C57EA004BAE2D /* CustomEmoticonsCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = DF10EA51175C57EA004BAE2D /* CustomEmoticonsCellData.m */; };
 		DF10EA55175C5E62004BAE2D /* EXPInsaneLabelCustomEmoticonsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF10EA54175C5E62004BAE2D /* EXPInsaneLabelCustomEmoticonsViewController.m */; };
 		DF10EA5C175DBB24004BAE2D /* EXPNonCachedStrechableImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF10EA5B175DBB23004BAE2D /* EXPNonCachedStrechableImageViewController.m */; };
-		DF10EA5F175DBB61004BAE2D /* EXPNonCachedStrechableImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF10EA5E175DBB60004BAE2D /* EXPNonCachedStrechableImageCell.m */; };
-		DF10EA62175DBBC2004BAE2D /* EXPNonCachedStrechableImageCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = DF10EA61175DBBC1004BAE2D /* EXPNonCachedStrechableImageCellData.m */; };
 		DF10EA65175DBBFA004BAE2D /* EXPNonCachedStrechableImageCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF10EA64175DBBF8004BAE2D /* EXPNonCachedStrechableImageCustomView.m */; };
 		DF10EA68175DC2E6004BAE2D /* EXPFullyDrawnViewsNotCachedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF10EA67175DC2E3004BAE2D /* EXPFullyDrawnViewsNotCachedViewController.m */; };
 		DF10EA69175DCF5C004BAE2D /* EXPSimpleReceiveView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF78DA4174E15C8000A8962 /* EXPSimpleReceiveView.m */; };
 		DF10EA6A175DCF5F004BAE2D /* EXPSimpleSendView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF78DA1174E15B9000A8962 /* EXPSimpleSendView.m */; };
+		DF10EA6B175DFC41004BAE2D /* EXPNonCachedStrechableImageCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = DF10EA61175DBBC1004BAE2D /* EXPNonCachedStrechableImageCellData.m */; };
 		DF29EFFC1754CE1B00B328C4 /* PerformanceMeasurer.m in Sources */ = {isa = PBXBuildFile; fileRef = DF29EFFB1754CE1A00B328C4 /* PerformanceMeasurer.m */; };
 		DF32642117578839000D8D4D /* EXPerimentalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF32642017578839000D8D4D /* EXPerimentalViewController.m */; };
 		DF4EB105175473D300633ED2 /* EFCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4EB0FE175473D300633ED2 /* EFCustomView.m */; };
@@ -48,7 +46,6 @@
 		DFF78D5A174D38D3000A8962 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DFF78D59174D38D3000A8962 /* Default@2x.png */; };
 		DFF78D5C174D38D3000A8962 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DFF78D5B174D38D3000A8962 /* Default-568h@2x.png */; };
 		DFF78D5F174D38D3000A8962 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFF78D5D174D38D3000A8962 /* MainStoryboard.storyboard */; };
-		DFF78D62174D38D3000A8962 /* EXPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF78D61174D38D3000A8962 /* EXPViewController.m */; };
 		DFF78D6A174D38F8000A8962 /* EXPAppDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF78D69174D38F8000A8962 /* EXPAppDataSource.m */; };
 		DFF78D6D174D39AD000A8962 /* EXPSentMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF78D6C174D39AD000A8962 /* EXPSentMessageView.m */; };
 		DFF78D71174D3B25000A8962 /* EXPReceivedMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF78D70174D3B25000A8962 /* EXPReceivedMessageView.m */; };
@@ -61,7 +58,6 @@
 		DFF78D9C174DF684000A8962 /* EXPSpecialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF78D9B174DF63A000A8962 /* EXPSpecialViewController.m */; };
 		DFF78D9F174E1499000A8962 /* EXPSimpleDrawnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF78D9E174E1499000A8962 /* EXPSimpleDrawnViewController.m */; };
 		DFF78DA9174E1768000A8962 /* pathMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF78DA8174E1767000A8962 /* pathMethods.m */; };
-		DFF78DC8174F49D7000A8962 /* EXPCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF78DC7174F49D7000A8962 /* EXPCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,8 +82,8 @@
 		DF0975DC1754AD9000126D1D /* CALayerMethodCellData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CALayerMethodCellData.m; sourceTree = "<group>"; };
 		DF0975DE1754AFD700126D1D /* EXPLayerMethodTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPLayerMethodTableViewController.h; sourceTree = "<group>"; };
 		DF0975DF1754AFD800126D1D /* EXPLayerMethodTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPLayerMethodTableViewController.m; sourceTree = "<group>"; };
-		DF0975E11754B27500126D1D /* EXPLayerTypeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPLayerTypeCell.h; sourceTree = "<group>"; };
-		DF0975E21754B27500126D1D /* EXPLayerTypeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPLayerTypeCell.m; sourceTree = "<group>"; };
+		DF0975E11754B27500126D1D /* EXPLayerTypeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXPLayerTypeCell.h; path = MessageRepresentations/EXPLayerTypeCell.h; sourceTree = "<group>"; };
+		DF0975E21754B27500126D1D /* EXPLayerTypeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EXPLayerTypeCell.m; path = MessageRepresentations/EXPLayerTypeCell.m; sourceTree = "<group>"; };
 		DF10EA4D175C564B004BAE2D /* EXPLayerCustomEmoticons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPLayerCustomEmoticons.h; sourceTree = "<group>"; };
 		DF10EA4E175C564B004BAE2D /* EXPLayerCustomEmoticons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPLayerCustomEmoticons.m; sourceTree = "<group>"; };
 		DF10EA50175C57EA004BAE2D /* CustomEmoticonsCellData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomEmoticonsCellData.h; sourceTree = "<group>"; };
@@ -97,8 +93,6 @@
 		DF10EA58175DB3B2004BAE2D /* TDTTextualSmileyToEmojiMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDTTextualSmileyToEmojiMapper.m; path = MessageRepresentations/TDTTextualSmileyToEmojiMapper.m; sourceTree = "<group>"; };
 		DF10EA5A175DBB22004BAE2D /* EXPNonCachedStrechableImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPNonCachedStrechableImageViewController.h; sourceTree = "<group>"; };
 		DF10EA5B175DBB23004BAE2D /* EXPNonCachedStrechableImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPNonCachedStrechableImageViewController.m; sourceTree = "<group>"; };
-		DF10EA5D175DBB5F004BAE2D /* EXPNonCachedStrechableImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPNonCachedStrechableImageCell.h; sourceTree = "<group>"; };
-		DF10EA5E175DBB60004BAE2D /* EXPNonCachedStrechableImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPNonCachedStrechableImageCell.m; sourceTree = "<group>"; };
 		DF10EA60175DBBC0004BAE2D /* EXPNonCachedStrechableImageCellData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPNonCachedStrechableImageCellData.h; sourceTree = "<group>"; };
 		DF10EA61175DBBC1004BAE2D /* EXPNonCachedStrechableImageCellData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPNonCachedStrechableImageCellData.m; sourceTree = "<group>"; };
 		DF10EA63175DBBF7004BAE2D /* EXPNonCachedStrechableImageCustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPNonCachedStrechableImageCustomView.h; sourceTree = "<group>"; };
@@ -137,8 +131,8 @@
 		DFF78D59174D38D3000A8962 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		DFF78D5B174D38D3000A8962 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		DFF78D5E174D38D3000A8962 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		DFF78D60174D38D3000A8962 /* EXPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EXPViewController.h; sourceTree = "<group>"; };
-		DFF78D61174D38D3000A8962 /* EXPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EXPViewController.m; sourceTree = "<group>"; };
+		DFF78D60174D38D3000A8962 /* EXPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EXPViewController.h; path = MessageRepresentations/EXPViewController.h; sourceTree = "<group>"; };
+		DFF78D61174D38D3000A8962 /* EXPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = EXPViewController.m; path = MessageRepresentations/EXPViewController.m; sourceTree = "<group>"; };
 		DFF78D68174D38F8000A8962 /* EXPAppDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPAppDataSource.h; sourceTree = "<group>"; };
 		DFF78D69174D38F8000A8962 /* EXPAppDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPAppDataSource.m; sourceTree = "<group>"; };
 		DFF78D6B174D39AD000A8962 /* EXPSentMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPSentMessageView.h; sourceTree = "<group>"; };
@@ -167,8 +161,6 @@
 		DFF78DA4174E15C8000A8962 /* EXPSimpleReceiveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPSimpleReceiveView.m; sourceTree = "<group>"; };
 		DFF78DA7174E1767000A8962 /* pathMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pathMethods.h; sourceTree = "<group>"; };
 		DFF78DA8174E1767000A8962 /* pathMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pathMethods.m; sourceTree = "<group>"; };
-		DFF78DC6174F49D7000A8962 /* EXPCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPCell.h; sourceTree = "<group>"; };
-		DFF78DC7174F49D7000A8962 /* EXPCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXPCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +207,10 @@
 				DF4EB0FC175473D300633ED2 /* EFTableViewCell.m */,
 				DFF78D7B174D4729000A8962 /* EXPFullyDrawnHeightsCachedViewController.h */,
 				DFF78D7C174D4729000A8962 /* EXPFullyDrawnHeightsCachedViewController.m */,
+				DF0975E11754B27500126D1D /* EXPLayerTypeCell.h */,
+				DF0975E21754B27500126D1D /* EXPLayerTypeCell.m */,
+				DFF78D60174D38D3000A8962 /* EXPViewController.h */,
+				DFF78D61174D38D3000A8962 /* EXPViewController.m */,
 			);
 			name = Unused;
 			sourceTree = "<group>";
@@ -299,14 +295,6 @@
 				DFF78DA4174E15C8000A8962 /* EXPSimpleReceiveView.m */,
 				DFF78DA0174E15B9000A8962 /* EXPSimpleSendView.h */,
 				DFF78DA1174E15B9000A8962 /* EXPSimpleSendView.m */,
-				DF10EA5A175DBB22004BAE2D /* EXPNonCachedStrechableImageViewController.h */,
-				DF10EA5B175DBB23004BAE2D /* EXPNonCachedStrechableImageViewController.m */,
-				DF10EA5D175DBB5F004BAE2D /* EXPNonCachedStrechableImageCell.h */,
-				DF10EA5E175DBB60004BAE2D /* EXPNonCachedStrechableImageCell.m */,
-				DF10EA60175DBBC0004BAE2D /* EXPNonCachedStrechableImageCellData.h */,
-				DF10EA61175DBBC1004BAE2D /* EXPNonCachedStrechableImageCellData.m */,
-				DF10EA63175DBBF7004BAE2D /* EXPNonCachedStrechableImageCustomView.h */,
-				DF10EA64175DBBF8004BAE2D /* EXPNonCachedStrechableImageCustomView.m */,
 				DF0153C21758742A00109927 /* EXPInsaneLabel.h */,
 				DF0153C31758742A00109927 /* EXPInsaneLabel.m */,
 				DF32641F17578839000D8D4D /* EXPerimentalViewController.h */,
@@ -315,8 +303,6 @@
 				DF10EA66175DC2E1004BAE2D /* EXPFullyDrawnViewsNotCachedViewController.h */,
 				DF10EA67175DC2E3004BAE2D /* EXPFullyDrawnViewsNotCachedViewController.m */,
 				DF4EB0FA175473D300633ED2 /* ViewController.m */,
-				DF0975E11754B27500126D1D /* EXPLayerTypeCell.h */,
-				DF0975E21754B27500126D1D /* EXPLayerTypeCell.m */,
 				DF0975D61754A6E800126D1D /* EXPLayerMethodCustomView.h */,
 				DF0975D71754A6E800126D1D /* EXPLayerMethodCustomView.m */,
 				DF0975DE1754AFD700126D1D /* EXPLayerMethodTableViewController.h */,
@@ -341,26 +327,28 @@
 				DF10EA51175C57EA004BAE2D /* CustomEmoticonsCellData.m */,
 				DF10EA53175C5E62004BAE2D /* EXPInsaneLabelCustomEmoticonsViewController.h */,
 				DF10EA54175C5E62004BAE2D /* EXPInsaneLabelCustomEmoticonsViewController.m */,
-				DFF78D60174D38D3000A8962 /* EXPViewController.h */,
-				DFF78D61174D38D3000A8962 /* EXPViewController.m */,
-				DFF78D9A174DF63A000A8962 /* EXPSpecialViewController.h */,
-				DFF78D9B174DF63A000A8962 /* EXPSpecialViewController.m */,
 				DFF78D9D174E1498000A8962 /* EXPSimpleDrawnViewController.h */,
 				DFF78D9E174E1499000A8962 /* EXPSimpleDrawnViewController.m */,
-				DFF78D68174D38F8000A8962 /* EXPAppDataSource.h */,
-				DFF78D69174D38F8000A8962 /* EXPAppDataSource.m */,
-				DFF78D89174DE7C8000A8962 /* EXPBubbleData.h */,
-				DFF78D8A174DE7C8000A8962 /* EXPBubbleData.m */,
 				DFF78D6B174D39AD000A8962 /* EXPSentMessageView.h */,
 				DFF78D6C174D39AD000A8962 /* EXPSentMessageView.m */,
 				DFF78D6F174D3B25000A8962 /* EXPReceivedMessageView.h */,
 				DFF78D70174D3B25000A8962 /* EXPReceivedMessageView.m */,
+				DF10EA5A175DBB22004BAE2D /* EXPNonCachedStrechableImageViewController.h */,
+				DF10EA5B175DBB23004BAE2D /* EXPNonCachedStrechableImageViewController.m */,
+				DF10EA60175DBBC0004BAE2D /* EXPNonCachedStrechableImageCellData.h */,
+				DF10EA61175DBBC1004BAE2D /* EXPNonCachedStrechableImageCellData.m */,
+				DF10EA63175DBBF7004BAE2D /* EXPNonCachedStrechableImageCustomView.h */,
+				DF10EA64175DBBF8004BAE2D /* EXPNonCachedStrechableImageCustomView.m */,
+				DFF78D68174D38F8000A8962 /* EXPAppDataSource.h */,
+				DFF78D69174D38F8000A8962 /* EXPAppDataSource.m */,
+				DFF78D9A174DF63A000A8962 /* EXPSpecialViewController.h */,
+				DFF78D9B174DF63A000A8962 /* EXPSpecialViewController.m */,
+				DFF78D89174DE7C8000A8962 /* EXPBubbleData.h */,
+				DFF78D8A174DE7C8000A8962 /* EXPBubbleData.m */,
 				DFF78D8D174DECBB000A8962 /* EXPSpecialTableView.h */,
 				DFF78D8E174DECBB000A8962 /* EXPSpecialTableView.m */,
 				DFF78D90174DF116000A8962 /* EXPSpecialTableViewCell.h */,
 				DFF78D91174DF116000A8962 /* EXPSpecialTableViewCell.m */,
-				DFF78DC6174F49D7000A8962 /* EXPCell.h */,
-				DFF78DC7174F49D7000A8962 /* EXPCell.m */,
 				DFF78D6E174D3ACF000A8962 /* constants.h */,
 				DFF78DA7174E1767000A8962 /* pathMethods.h */,
 				DFF78DA8174E1767000A8962 /* pathMethods.m */,
@@ -447,7 +435,6 @@
 			files = (
 				DFF78D52174D38D3000A8962 /* main.m in Sources */,
 				DFF78D56174D38D3000A8962 /* EXPAppDelegate.m in Sources */,
-				DFF78D62174D38D3000A8962 /* EXPViewController.m in Sources */,
 				DFF78D6A174D38F8000A8962 /* EXPAppDataSource.m in Sources */,
 				DFF78D6D174D39AD000A8962 /* EXPSentMessageView.m in Sources */,
 				DFF78D71174D3B25000A8962 /* EXPReceivedMessageView.m in Sources */,
@@ -457,7 +444,6 @@
 				DFF78D9C174DF684000A8962 /* EXPSpecialViewController.m in Sources */,
 				DFF78D9F174E1499000A8962 /* EXPSimpleDrawnViewController.m in Sources */,
 				DFF78DA9174E1768000A8962 /* pathMethods.m in Sources */,
-				DFF78DC8174F49D7000A8962 /* EXPCell.m in Sources */,
 				DF4EB105175473D300633ED2 /* EFCustomView.m in Sources */,
 				DF4EB106175473D300633ED2 /* EFTableViewController.m in Sources */,
 				DF4EB107175473D300633ED2 /* EFCellData.m in Sources */,
@@ -465,7 +451,6 @@
 				DF0975D81754A6E800126D1D /* EXPLayerMethodCustomView.m in Sources */,
 				DF0975DD1754AD9000126D1D /* CALayerMethodCellData.m in Sources */,
 				DF0975E01754AFD800126D1D /* EXPLayerMethodTableViewController.m in Sources */,
-				DF0975E31754B27600126D1D /* EXPLayerTypeCell.m in Sources */,
 				DF29EFFC1754CE1B00B328C4 /* PerformanceMeasurer.m in Sources */,
 				DF011ECC1757153D00357479 /* PBEmojiLabel.m in Sources */,
 				DF011ECF17571A6000357479 /* EXPMenuTableViewController.m in Sources */,
@@ -475,12 +460,11 @@
 				DF10EA52175C57EA004BAE2D /* CustomEmoticonsCellData.m in Sources */,
 				DF10EA55175C5E62004BAE2D /* EXPInsaneLabelCustomEmoticonsViewController.m in Sources */,
 				DF10EA5C175DBB24004BAE2D /* EXPNonCachedStrechableImageViewController.m in Sources */,
-				DF10EA5F175DBB61004BAE2D /* EXPNonCachedStrechableImageCell.m in Sources */,
-				DF10EA62175DBBC2004BAE2D /* EXPNonCachedStrechableImageCellData.m in Sources */,
 				DF10EA65175DBBFA004BAE2D /* EXPNonCachedStrechableImageCustomView.m in Sources */,
 				DF10EA68175DC2E6004BAE2D /* EXPFullyDrawnViewsNotCachedViewController.m in Sources */,
 				DF10EA69175DCF5C004BAE2D /* EXPSimpleReceiveView.m in Sources */,
 				DF10EA6A175DCF5F004BAE2D /* EXPSimpleSendView.m in Sources */,
+				DF10EA6B175DFC41004BAE2D /* EXPNonCachedStrechableImageCellData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

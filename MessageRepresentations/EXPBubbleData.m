@@ -8,20 +8,20 @@
 #import "EXPBubbleData.h"
 #import <QuartzCore/QuartzCore.h>
 
+
+
 @implementation EXPBubbleData
-
-
-#pragma mark - Text bubble
-
 const UIEdgeInsets textInsetsMine = {5, 10, 11, 17};
 const UIEdgeInsets textInsetsSomeone = {5, 15, 11, 10};
 
-+ (id)dataWithText:(NSString *)text date:(NSDate *)date type:(NSBubbleType)type withAvatar:(UIImage *)avatar
+#pragma mark - Text bubble
+
++ (id)dataWithText:(NSString *)text type:(NSBubbleType)type withAvatar:(UIImage *)avatar
 {
-    return [[EXPBubbleData alloc] initWithText:text date:date type:type withAvatar:avatar];
+    return [[EXPBubbleData alloc] initWithText:text  type:type withAvatar:avatar];
 }
 
-- (id)initWithText:(NSString *)text date:(NSDate *)date type:(NSBubbleType)type withAvatar:avatar
+- (id)initWithText:(NSString *)text type:(NSBubbleType)type withAvatar:avatar
 {
     UIFont *font = [UIFont systemFontOfSize:[UIFont systemFontSize]];
     CGSize size = [(text ? text : @"") sizeWithFont:font constrainedToSize:CGSizeMake(220, 9999) lineBreakMode:NSLineBreakByWordWrapping];
@@ -33,7 +33,7 @@ const UIEdgeInsets textInsetsSomeone = {5, 15, 11, 10};
     label.backgroundColor = [UIColor clearColor];
     UIEdgeInsets insets = (type == BubbleTypeMine ? textInsetsMine : textInsetsSomeone);
     self.avatar = avatar;
-    return [self initWithView:label date:date type:type insets:insets];
+    return [self initWithView:label  type:type insets:insets];
 }
 
 #pragma mark - Image bubble
@@ -41,12 +41,12 @@ const UIEdgeInsets textInsetsSomeone = {5, 15, 11, 10};
 const UIEdgeInsets imageInsetsMine = {11, 13, 16, 22};
 const UIEdgeInsets imageInsetsSomeone = {11, 18, 16, 14};
 
-+ (id)dataWithImage:(UIImage *)image date:(NSDate *)date type:(NSBubbleType)type
++ (id)dataWithImage:(UIImage *)image type:(NSBubbleType)type
 {
-    return [[EXPBubbleData alloc] initWithImage:image date:date type:type];
+    return [[EXPBubbleData alloc] initWithImage:image type:type];
 }
 
-- (id)initWithImage:(UIImage *)image date:(NSDate *)date type:(NSBubbleType)type
+- (id)initWithImage:(UIImage *)image  type:(NSBubbleType)type
 {
     CGSize size = image.size;
     if (size.width > 220)
@@ -61,23 +61,22 @@ const UIEdgeInsets imageInsetsSomeone = {11, 18, 16, 14};
     imageView.layer.masksToBounds = YES;
     
     UIEdgeInsets insets = (type == BubbleTypeMine ? imageInsetsMine : imageInsetsSomeone);
-    return [self initWithView:imageView date:date type:type insets:insets];
+    return [self initWithView:imageView  type:type insets:insets];
 }
 
 #pragma mark - Custom view bubble
 
-+ (id)dataWithView:(UIView *)view date:(NSDate *)date type:(NSBubbleType)type insets:(UIEdgeInsets)insets
++ (id)dataWithView:(UIView *)view  type:(NSBubbleType)type insets:(UIEdgeInsets)insets
 {
-    return [[EXPBubbleData alloc] initWithView:view date:date type:type insets:insets];
+    return [[EXPBubbleData alloc] initWithView:view  type:type insets:insets];
 }
 
-- (id)initWithView:(UIView *)view date:(NSDate *)date type:(NSBubbleType)type insets:(UIEdgeInsets)insets
+- (id)initWithView:(UIView *)view  type:(NSBubbleType)type insets:(UIEdgeInsets)insets
 {
     self = [super init];
     if (self)
     {
         _view = view;
-        _date = date;
         _type = type;
         _insets = insets;
     }

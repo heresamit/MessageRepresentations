@@ -43,6 +43,7 @@
 #define triangleTopBuffer 4.0f
 #define CORNERRADIUS 8.0f
 
+
 typedef enum{
     receivedWithAvatar = 0,
     receivedWithoutAvatar,
@@ -57,3 +58,9 @@ typedef enum{
     selectedReceivedWithAvatar
     //...
 }typeOfBubble;
+
+typedef enum _NSBubbleType
+{
+    BubbleTypeMine = 0,
+    BubbleTypeSomeoneElse = 1
+} NSBubbleType;

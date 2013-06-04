@@ -7,13 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "constants.h"
 
-
-typedef enum _NSBubbleType
-{
-    BubbleTypeMine = 0,
-    BubbleTypeSomeoneElse = 1
-} NSBubbleType;
 
 @interface EXPBubbleData : NSObject
 
@@ -23,11 +18,9 @@ typedef enum _NSBubbleType
 @property (readonly, nonatomic) UIEdgeInsets insets;
 @property (nonatomic, weak) UIImage *avatar;
 
-- (id)initWithText:(NSString *)text date:(NSDate *)date type:(NSBubbleType)type withAvatar:avatar;
-+ (id)dataWithText:(NSString *)text date:(NSDate *)date type:(NSBubbleType)type withAvatar:(UIImage *)avatar;
-- (id)initWithImage:(UIImage *)image date:(NSDate *)date type:(NSBubbleType)type;
-+ (id)dataWithImage:(UIImage *)image date:(NSDate *)date type:(NSBubbleType)type;
-- (id)initWithView:(UIView *)view date:(NSDate *)date type:(NSBubbleType)type insets:(UIEdgeInsets)insets;
-+ (id)dataWithView:(UIView *)view date:(NSDate *)date type:(NSBubbleType)type insets:(UIEdgeInsets)insets;
+- (id)initWithText:(NSString *)text type:(NSBubbleType)type withAvatar:avatar;
++ (id)dataWithText:(NSString *)text type:(NSBubbleType)type withAvatar:(UIImage *)avatar;
+- (id)initWithView:(UIView *)view type:(NSBubbleType)type insets:(UIEdgeInsets)insets;
++ (id)dataWithView:(UIView *)view type:(NSBubbleType)type insets:(UIEdgeInsets)insets;
 
 @end

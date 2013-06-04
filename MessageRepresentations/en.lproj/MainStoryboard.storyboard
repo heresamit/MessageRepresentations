@@ -230,7 +230,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
-                                            <segue destination="5aU-qR-h2p" kind="push" id="Vrk-zn-9ir"/>
+                                            <segue destination="5aU-qR-h2p" kind="push" identifier="NonCachedImageMethod" id="Vrk-zn-9ir"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="8Zw-CU-e0D" style="IBUITableViewCellStyleDefault" id="vK9-3o-eU8">
@@ -504,53 +504,6 @@
             <point key="canvasLocation" x="-368" y="-1150"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="EFTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EFTableViewController.h"/>
-        </class>
-        <class className="EXPFullyDrawnViewsNotCachedViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EXPFullyDrawnViewsNotCachedViewController.h"/>
-        </class>
-        <class className="EXPInsaneLabelCustomEmoticonsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EXPInsaneLabelCustomEmoticonsViewController.h"/>
-        </class>
-        <class className="EXPLayerMethodTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EXPLayerMethodTableViewController.h"/>
-        </class>
-        <class className="EXPLayerTypeCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EXPLayerTypeCell.h"/>
-        </class>
-        <class className="EXPLazyDrawnCachedTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EXPLazyDrawnCachedTableViewController.h"/>
-        </class>
-        <class className="EXPMenuTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EXPMenuTableViewController.h"/>
-        </class>
-        <class className="EXPNonCachedStrechableImageViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EXPNonCachedStrechableImageViewController.h"/>
-        </class>
-        <class className="EXPSimpleDrawnViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EXPSimpleDrawnViewController.h"/>
-        </class>
-        <class className="EXPSimpleReceiveView" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EXPSimpleReceiveView.h"/>
-        </class>
-        <class className="EXPSimpleSendView" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EXPSimpleSendView.h"/>
-        </class>
-        <class className="EXPSpecialTableView" superclassName="UITableView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EXPSpecialTableView.h"/>
-        </class>
-        <class className="EXPSpecialViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EXPSpecialViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="bubbleTableView" candidateClass="EXPSpecialTableView"/>
-            </relationships>
-        </class>
-        <class className="EXPerimentalViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EXPerimentalViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface EXPNonCachedStrechableImageViewController : UITableViewController
-
+@property (nonatomic,weak) NSMutableArray *tempArray;
+- (void) parseData;
 @end

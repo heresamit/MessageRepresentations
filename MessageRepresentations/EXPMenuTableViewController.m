@@ -13,6 +13,8 @@
 #import "EXPLazyDrawnCachedTableViewController.h"
 #import "EFTableViewController.h"
 #import "EXPFullyDrawnViewsNotCachedViewController.h"
+#import "EXPNonCachedStrechableImageViewController.h"
+
 @interface EXPMenuTableViewController ()
 @property (nonatomic, strong) NSMutableArray *tempArray;
 @end
@@ -99,13 +101,19 @@
         tvc.tempArray = self.tempArray;
         [tvc parseData];
     }
-    //preCachedView
-    //EXPFullyDrawnViewsNotCachedViewController
-    //drawnWithGradientNoCaching
+
     if([[segue identifier] isEqualToString:@"drawnWithGradientNoCaching"])
     {
         
         EXPFullyDrawnViewsNotCachedViewController *tvc = (EXPFullyDrawnViewsNotCachedViewController *)[segue destinationViewController];
+        
+        tvc.tempArray = self.tempArray;
+        [tvc parseData];
+    }
+    if([[segue identifier] isEqualToString:@"NonCachedImageMethod"])
+    {
+        
+        EXPNonCachedStrechableImageViewController *tvc = (EXPNonCachedStrechableImageViewController *)[segue destinationViewController];
         
         tvc.tempArray = self.tempArray;
         [tvc parseData];

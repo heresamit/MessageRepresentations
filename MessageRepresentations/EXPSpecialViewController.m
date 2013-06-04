@@ -54,7 +54,7 @@
     _dataForBubbles = [[NSMutableArray alloc] init];
     for(id obj in _messages.messageArray)
     {
-        [_dataForBubbles addObject:[EXPBubbleData dataWithText:[obj objectAtIndex:1] date:[NSDate dateWithTimeIntervalSinceNow:0] type:!([[obj objectAtIndex:0] boolValue]) withAvatar:_avatar]];
+        [_dataForBubbles addObject:[EXPBubbleData dataWithText:[obj objectAtIndex:1]  type:!([[obj objectAtIndex:0] boolValue]) withAvatar:_avatar]];
         
     }
     self.bubbleTableView.dataObjectForBubbles = self;

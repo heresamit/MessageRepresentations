@@ -10,8 +10,9 @@
 #import "EXPLayerMethodCustomView.h"
 #import "constants.h"
 #import "CALayerMethodCellData.h"
-#import "EXPLayerTypeCell.h"
+//#import "EXPLayerTypeCell.h"
 #import "PerformanceMeasurer.h"
+
 @interface EXPLayerMethodTableViewController ()
 
 @property (nonatomic,strong) UIImage *avatarImage1;
